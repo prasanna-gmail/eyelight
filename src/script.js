@@ -1,5 +1,11 @@
 import * as THREE from 'three'
+console.log("pkp:  ~ file: script.js:2 ~ THREE:", THREE)
 import $ from "jquery";
+// import { GLTFLoader } from "https://cdn.rawgit.com/mrdoob/three.js/master/examples/jsm/loaders/GLTFLoader.js"
+
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const loader = new GLTFLoader();
 var scene, camera, renderer, container;
 var Ambient, sunLight;
 var LaserBeam1;
