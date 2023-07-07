@@ -47,28 +47,52 @@ sunLight = new THREE.DirectionalLight(0xffffff, 0.5);
 sunLight.position.set(5, 2, -10);
 scene.add(sunLight);
 
-//All object
+// ************************************All Reflector object**********************************************
 var Geometry, Material;
 var objectArray = [];
-for (var i = 0; i < 5; i++) {
-    Geometry = new THREE.BoxGeometry(1, 2, 4);
-    Material = new THREE.MeshPhongMaterial({
-        color: 0x00ff00
-    });
-    var Mash = new THREE.Mesh(Geometry, Material);
+// for (var i = 0; i < 5; i++) {
+//     Geometry = new THREE.BoxGeometry(1, 2, 4);
+//     Material = new THREE.MeshPhongMaterial({
+//         color: 0x00ff00
+//     });
+//     var Mash = new THREE.Mesh(Geometry, Material);
 
-    Mash.position.set(
-        (i % 2) * 5 - 2.5,
-        0,
-        i * -5
-    );
-    objectArray.push(Mash);
-    scene.add(Mash);
-}
+//     Mash.position.set(
+//         (i % 2) * 5 - 2.5,
+//         0,
+//         i * -5
+//     );
+//     objectArray.push(Mash);
+//     scene.add(Mash);
+// }
+
+Geometry = new THREE.BoxGeometry(1, .1, 1);
+Material = new THREE.MeshPhongMaterial({
+    color: 0x00ff00
+});
+var Reflector1 = new THREE.Mesh(Geometry, Material);
+Reflector1.position.set(2,0,-0.8)
+scene.add(Reflector1);
+objectArray.push(Reflector1);
+
+var Reflector2 = new THREE.Mesh(Geometry, Material);
+Reflector2.position.set(2.2,1.1,-0.1)
+scene.add(Reflector2);
+objectArray.push(Reflector2);
+
+// ************************************LaserBeam**********************************************
+
 var LaserBeam1 = new LaserBeam({
     reflectMax: 5
 });
+
+var LaserBeam2 = new LaserBeam({
+    reflectMax:5
+});
+
+
 add2Scene(LaserBeam1);
+add2Scene(LaserBeam2);
 
 function add2Scene(obj) {
     scene.add(obj.object3d);
@@ -79,12 +103,36 @@ function add2Scene(obj) {
     }
 }
 
+// ************************************GLB/GLTF loader**********************************************
+
+var GlbLoader = new GLTFLoader();
+var eye;
+  var eye;
+  GlbLoader.load( './src/model/eye.glb', function ( gltf )
+{
+
+     
+    eye = gltf.scene;
+    eye.position.set(-3,0,-5);
+    eye.scale.set(0.013,.013,.013);
+    eye.rotation.y= -90;
+    eye.rotation.x= 0.3
+    scene.add(eye);
+} );
+
+// ************************************animate()**********************************************
 function animate() {
 
     requestAnimationFrame(animate);
 
-    LaserBeam1.object3d.position.set(4.5, 0, 7);
+    LaserBeam1.object3d.position.set(10, 0, 5);// start postion of laser beam
     LaserBeam1.intersect(
+        new THREE.Vector3(-4.5, 0, -4.5 + Math.cos(Date.now() * 0.05 * Math.PI / 180) * 2),
+        objectArray
+    );
+
+    LaserBeam2.object3d.position.set(8, 1.2,6.2);// start postion of laser beam
+    LaserBeam2.intersect(
         new THREE.Vector3(-4.5, 0, -4.5 + Math.cos(Date.now() * 0.05 * Math.PI / 180) * 2),
         objectArray
     );
@@ -96,6 +144,8 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
+
+// ************************************LaserBeam function**********************************************
 
 function LaserBeam(iconfig) {
 
