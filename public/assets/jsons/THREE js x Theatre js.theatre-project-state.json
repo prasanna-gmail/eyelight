@@ -1,0 +1,122 @@
+{
+  "sheetsById": {
+    "Animated scene": {
+      "staticOverrides": {
+        "byObject": {
+          "Cemera": {
+            "position": {
+              "x": -6,
+              "y": 77,
+              "z": 100
+            }
+          },
+          "Laser Beam1": {
+            "position": {
+              "x": 71,
+              "y": -1,
+              "z": 3
+            },
+            "intersect": {
+              "x": -93.56962025316454,
+              "y": -8.86075949367089,
+              "z": -35.64556962025316
+            }
+          },
+          "Reflector1": {
+            "position": {
+              "x": 15.999999999999998,
+              "y": -40.101171932947636,
+              "z": -17
+            },
+            "rotation": {
+              "x": 0
+            },
+            "scale": {
+              "x": 1
+            }
+          },
+          "Reflector2": {
+            "position": {
+              "x": 9.169714143001737,
+              "y": -4.336521081085144,
+              "z": -17.92784810126582
+            },
+            "rotation": {
+              "x": 0.9873417721518976,
+              "y": 0.12658227848101333,
+              "z": 0.05063291139240426
+            },
+            "scale": {
+              "x": 0.6708203530633432,
+              "y": 1.1494140335261829,
+              "z": 0.1
+            }
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 10,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Laser Beam1": {
+            "trackData": {
+              "uDUGicMqeb": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Laser Beam1:[\"scale\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "ukYAPoc0NJ",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "_IVxD18gCV",
+                    "position": 4.9,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 155.51375070405962
+                  },
+                  {
+                    "id": "vre1u5qCaU",
+                    "position": 9.7,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 134.1772151898734
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scale\",\"z\"]": "uDUGicMqeb"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "kIgprb1SpUsqImVM"
+  ]
+}
