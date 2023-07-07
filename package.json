@@ -12,6 +12,8 @@
     "vite": "^4.4.0"
   },
   "dependencies": {
+    "@theatre/core": "^0.6.1",
+    "@theatre/studio": "^0.6.1",
     "jquery": "^3.7.0",
     "three": "^0.154.0"
   }
