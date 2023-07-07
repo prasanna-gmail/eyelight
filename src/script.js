@@ -82,13 +82,9 @@ function animate() {
     requestAnimationFrame(animate);
 
     // LaserBeam1.object3d.position.set(4.5, 0, 7);
-    LaserBeam1.object3d.position.set(50, -90, -50);
+    LaserBeam1.object3d.position.set(90, -90, -50);
     LaserBeam1.intersect(
-        new THREE.Vector3(
-            -9,
-            10,
-            4 + Math.cos(Date.now() * 0.51 * Math.PI / 180) * 2),
-        objectArray
+        new THREE.Vector3(-8, 1, -10), objectArray
     );
 
     // LaserBeam1.intersect(
@@ -100,9 +96,9 @@ function animate() {
     // );
 
 
-    // camera.position.x += (mouse.x * 30 - camera.position.x) * 0.05
-    // camera.position.y += (mouse.y * -10 - camera.position.y + 5) * 0.05
-    camera.lookAt(scene.position);
+    camera.position.x += (mouse.x * 30 - camera.position.x) * 0.05
+    camera.position.y += (mouse.y * -20 - camera.position.y + 10) * 0.05
+    // camera.lookAt(scene.position);
 
     renderer.render(scene, camera);
 }
@@ -111,7 +107,7 @@ animate();
 function LaserBeam(iconfig) {
 
     var config = {
-        length: 200,
+        length: 60, //theatre var 1 for beam len
         reflectMax: 1
     };
     config = $.extend(config, iconfig);
