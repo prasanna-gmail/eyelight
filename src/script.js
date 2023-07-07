@@ -1,8 +1,6 @@
 import * as THREE from 'three'
 console.log("pkp:  ~ file: script.js:2 ~ THREE:", THREE)
 import $ from "jquery";
-// import { GLTFLoader } from "https://cdn.rawgit.com/mrdoob/three.js/master/examples/jsm/loaders/GLTFLoader.js"
-
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const loader = new GLTFLoader();
@@ -89,8 +87,8 @@ function animate() {
         objectArray
     );
 
-    camera.position.x += (mouse.x * 30 - camera.position.x) * 0.05
-    camera.position.y += (mouse.y * -10 - camera.position.y + 5) * 0.05
+    // camera.position.x += (mouse.x * 30 - camera.position.x) * 0.05
+    // camera.position.y += (mouse.y * -10 - camera.position.y + 5) * 0.05
     camera.lookAt(scene.position);
 
     renderer.render(scene, camera);
@@ -235,3 +233,77 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
+let eyeScene = null;
+document.onkeydown = function (e) {
+    console.log("pkp:  ~ file: script.js:238 ~ e:", e)
+    switch (e.key) {
+        case "a":
+            eyeScene.rotation.y += 0.1;
+            break;
+        case "d":
+            eyeScene.rotation.y -= 0.1;
+            break;
+        case "w":
+            eyeScene.scale.x += 0.1;
+            eyeScene.scale.y += 0.1;
+            eyeScene.scale.z += 0.1;
+            break;
+        case "s":
+            eyeScene.scale.x -= 0.1;
+            eyeScene.scale.y -= 0.1;
+            eyeScene.scale.z -= 0.1;
+            break;
+        case "ArrowDown":
+            eyeScene.position.y -= 1;
+            break;
+        case "ArrowUp":
+            console.log("pkp:  ~ file: script.js:242 ~ up eyeScene:", eyeScene)
+            eyeScene.position.y += 1;
+            break;
+    }
+};
+
+// Load a glTF resource
+loader.load(
+    // resource URL
+    'assets/humaneye.glb',
+    // called when the resource is loaded
+    function (gltf) {
+
+
+        eyeScene = gltf.scene;
+        console.log("pkp:  ~ file: script.js:258 ~ eyeScene:", eyeScene)
+        eyeScene.position.set(-110, -100, -40);
+
+        eyeScene.rotation.set(1.8, 4.8, 8.58);
+
+        eyeScene.scale.x = 0.26;
+        eyeScene.scale.y = 0.26;
+        eyeScene.scale.z = 0.26;
+
+
+
+
+        scene.add(gltf.scene);
+
+        gltf.animations; // Array<THREE.AnimationClip>
+        gltf.scene; // THREE.Group
+        gltf.scenes; // Array<THREE.Group>
+        gltf.cameras; // Array<THREE.Camera>
+        gltf.asset; // Object
+
+    },
+    // called while loading is progressing
+    function (xhr) {
+
+        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+
+    },
+    // called when loading has errors
+    function (error) {
+
+        console.log('An error happened');
+
+    }
+);
+
