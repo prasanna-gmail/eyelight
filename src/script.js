@@ -111,7 +111,7 @@ animate();
 function LaserBeam(iconfig) {
 
     var config = {
-        length: 100,
+        length: 200,
         reflectMax: 1
     };
     config = $.extend(config, iconfig);
