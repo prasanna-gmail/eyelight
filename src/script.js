@@ -81,11 +81,24 @@ function animate() {
 
     requestAnimationFrame(animate);
 
-    LaserBeam1.object3d.position.set(4.5, 0, 7);
+    // LaserBeam1.object3d.position.set(4.5, 0, 7);
+    LaserBeam1.object3d.position.set(50, -90, -50);
     LaserBeam1.intersect(
-        new THREE.Vector3(-4.5, 0, -4.5 + Math.cos(Date.now() * 0.05 * Math.PI / 180) * 2),
+        new THREE.Vector3(
+            -9,
+            10,
+            4 + Math.cos(Date.now() * 0.51 * Math.PI / 180) * 2),
         objectArray
     );
+
+    // LaserBeam1.intersect(
+    //     new THREE.Vector3(
+    //         -10,
+    //         10,
+    //         4 + Math.cos(Date.now() * 0.51 * Math.PI / 180) * 2),
+    //     objectArray
+    // );
+
 
     // camera.position.x += (mouse.x * 30 - camera.position.x) * 0.05
     // camera.position.y += (mouse.y * -10 - camera.position.y + 5) * 0.05
