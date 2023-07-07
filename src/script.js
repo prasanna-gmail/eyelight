@@ -119,18 +119,26 @@ const thLaserbeam = sheet.object('Laser Beam1', {
         x: types.number(vector.x, { range: [-200, 0] }),
         y: types.number(vector.y, { range: [-50, 0] }),
         z: types.number(vector.z, { range: [-50, 0] }),
-    })
+    }),
+    scale: types.compound({
+        z: types.number(LaserBeam1.object3d.scale.z, { range: [0, 200] }),
+    }),
+
 })
 
 thLaserbeam.onValuesChange((values) => {
 
     LaserBeam1.object3d.position.set(values.position.x, values.position.y, values.position.z);
     // LaserBeam1.object3d.position.set(values.intersect.x , values.intersect.y , values.intersect.z )
-
+    
     LaserBeam1.intersect(
 
         new THREE.Vector3(values.intersect.x, values.intersect.y, values.intersect.z), objectArray
     );
+   //LaserBeam1.object3d.scale.z=  values.scale.z;
+   config.length=  values.scale.z;
+    //LaserBeam1.hiddenReflectObject();
+  
 })
 const thReflector1 = sheet.object('Reflector1',{
     position:types.compound({
@@ -200,6 +208,11 @@ thCamera.onValuesChange((values) => {
 
 })
 
+
+// const thBeamLength = sheet.object('Beam Length',{
+//     x:types.number()
+// })
+
 function animate() {
 
     requestAnimationFrame(animate);
@@ -219,16 +232,16 @@ animate();
 
 
 
-
+var config = {
+    length: 90, //theatre var 1 for beam len
+    reflectMax: 1
+};
 
 
 
 function LaserBeam(iconfig) {
 
-    var config = {
-        length: 90, //theatre var 1 for beam len
-        reflectMax: 1
-    };
+    
     config = $.extend(config, iconfig);
 
     this.object3d = new THREE.Object3D();
@@ -314,6 +327,7 @@ function LaserBeam(iconfig) {
         }
         //non collision
         else {
+            console.log("config.length--->",config.length)
             this.object3d.scale.z = config.length;
             this.pointLight.visible = false;
             this.object3d.lookAt(
