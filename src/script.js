@@ -141,6 +141,29 @@ var vector = new THREE.Vector3;
 
 // })
 const thReflector1 = sheet.object('Reflector1', {
+    
+    
+    Camera: types.compound({
+       
+    }),
+    camerePosition: types.compound({
+        x: types.number(camera.position.x, { range: [-100, 100] }),
+        y: types.number(camera.position.y, { range: [-100, 100] }),
+        z: types.number(camera.position.z, { range: [-100, 100] }),
+    }),
+    cameraLookAt: types.compound({
+        x: types.number(0, { range: [-100, 100] }),
+        y: types.number(0, { range: [-100, 100] }),
+        z: types.number(0, { range: [-100, 100] }),
+    }),
+
+
+
+
+    Reflector1: types.compound({
+       
+    }),
+    
     ref1Position: types.compound({
         x: types.number(meshRefletor1.position.x, { range: [-50, 50] }),
         y: types.number(meshRefletor1.position.y, { range: [-50, 50] }),
@@ -157,6 +180,10 @@ const thReflector1 = sheet.object('Reflector1', {
         z: types.number(meshRefletor1.scale.z, { range: [0, 10] })
     }),
 
+    RayBeam1: types.compound({
+       
+    }),
+
     leser1Position: types.compound({
         x: types.number(LaserBeam1.object3d.position.x, { range: [-100, 100] }),
         y: types.number(LaserBeam1.object3d.position.y, { range: [-100, 100] }),
@@ -170,13 +197,15 @@ const thReflector1 = sheet.object('Reflector1', {
     leser1Scale: types.compound({
         z: types.number(LaserBeam1.object3d.scale.z, { range: [0, 200] }),
     }),
+
+    
 })
 thReflector1.onValuesChange((values) => {
     meshRefletor1.position.set(values.ref1Position.x, values.ref1Position.y, values.ref1Position.z);
     meshRefletor1.rotation.set(values.ref1Rotation.x, values.ref1Rotation.y, values.ref1Rotation.z);
     meshRefletor1.scale.set(values.ref1Scale.x, values.ref1Scale.y, values.ref1Scale.z);
 
-
+// laser beam on change
 
     LaserBeam1.object3d.position.set(values.leser1Position.x, values.leser1Position.y, values.leser1Position.z);
     // LaserBeam1.object3d.position.set(values.intersect.x , values.intersect.y , values.intersect.z )
@@ -188,6 +217,10 @@ thReflector1.onValuesChange((values) => {
     //LaserBeam1.object3d.scale.z=  values.scale.z;
     config.length = values.leser1Scale.z;
     //LaserBeam1.hiddenReflectObject();
+
+// camera  on change
+    camera.position.set(values.camerePosition.x, values.camerePosition.y, values.camerePosition.z)
+    camera.lookAt(values.cameraLookAt.x, values.cameraLookAt.y, values.cameraLookAt.z)
 
 })
 
