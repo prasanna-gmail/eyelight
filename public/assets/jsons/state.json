@@ -1,0 +1,89 @@
+{
+  "sheetsById": {
+    "Animated scene": {
+      "staticOverrides": {
+        "byObject": {
+          "Cemera": {
+            "position": {
+              "x": -1.2609405132769962,
+              "y": 8.821094793057426,
+              "z": 100
+            }
+          },
+          "Laser Beam1": {
+            "position": {
+              "x": 55,
+              "y": -27,
+              "z": -36
+            },
+            "intersect": {
+              "x": -90,
+              "y": -1,
+              "z": -1
+            },
+            "scale": {
+              "z": 56.962025316455694
+            }
+          },
+          "Reflector1": {
+            "position": {
+              "x": 17,
+              "y": -27,
+              "z": -36
+            },
+            "scale": {
+              "x": 0.3,
+              "y": 0.05,
+              "z": 0.2
+            },
+            "rotation": {
+              "z": 0.16,
+              "x": -0.6
+            },
+            "ref1Position": {
+              "x": 18.898828067052367,
+              "y": -30,
+              "z": -36
+            },
+            "ref1Rotation": {
+              "x": 1.6785936804628394,
+              "z": 0,
+              "y": 6.456
+            },
+            "ref1Scale": {
+              "x": 0.15,
+              "y": 0.01,
+              "z": 0.01
+            },
+            "leser1Position": {
+              "x": 100,
+              "y": -30,
+              "z": -36
+            },
+            "leser1Intersect": {
+              "x": -90,
+              "y": 0,
+              "z": 0
+            },
+            "leser1Scale": {
+              "z": 56
+            }
+          },
+          "Reflector2": {
+            "rotation": {
+              "x": 0.15190624536418929
+            },
+            "position": {
+              "x": -26.268357810413892
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "QJTyS3Em7E3VYO2Q",
+    "sibV9_L9FdEFM9IG"
+  ]
+}

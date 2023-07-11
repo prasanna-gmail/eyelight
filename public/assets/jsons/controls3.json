@@ -1,0 +1,92 @@
+{
+  "sheetsById": {
+    "Animated scene": {
+      "staticOverrides": {
+        "byObject": {
+          "Reflector1": {
+            "camerePosition": {
+              "x": 8.87,
+              "y": 77.217,
+              "z": 100
+            },
+            "ref1Position": {
+              "x": 19,
+              "y": -30,
+              "z": -36
+            },
+            "ref1Rotation": {
+              "x": 1.679,
+              "y": 6.456
+            },
+            "ref1Scale": {
+              "x": 0.15,
+              "y": 0.01,
+              "z": 0.01
+            },
+            "leser1Position": {
+              "x": 100,
+              "y": -30,
+              "z": -36
+            },
+            "leser1Intersect": {
+              "x": -90
+            },
+            "leser1Scale": {
+              "z": 0
+            }
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 10,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Reflector1": {
+            "trackData": {
+              "oWMGfhjcxJ": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Reflector1:[\"leser1Scale\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "WSZPZtRHNd",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "EDj1VI_BPb",
+                    "position": 9.767,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 60.759493670886066
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"leser1Scale\",\"z\"]": "oWMGfhjcxJ"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "OXI220LrKvg1iQkL"
+  ]
+}

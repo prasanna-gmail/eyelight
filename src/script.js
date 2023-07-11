@@ -2,26 +2,24 @@ import * as THREE from 'three'
 console.log("pkp:  ~ file: script.js:2 ~ THREE:", THREE)
 import $ from "jquery";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import studio from '@theatre/studio'
-import { getProject, types } from '@theatre/core'
+//import studio from '@theatre/studio'
+import { getProject, types } from '@theatre/core';
+import projectState from '../public/assets/jsons/controls3.json';
 
+console.log("projectState--->",projectState)
 const loader = new GLTFLoader();
 var scene, camera, renderer, container;
 var Ambient, sunLight;
 var LaserBeam1;
-var config1 = {
-    length: 60, //theatre var 1 for beam len
-    reflectMax: 1
-};
 
 container = document.getElementById('canvas-div');
 
 
 // theatre ....................................
-studio.initialize()
+//studio.initialize()
 
-const project = getProject('THREE.js x Theatre.js')
-
+ const project = getProject('THREE.js x Theatre.js',{ state: projectState })
+//const project = getProject('THREE.js x Theatre.js')
 const sheet = project.sheet('Animated scene')
 
 
@@ -272,6 +270,7 @@ thCamera.onValuesChange((values) => {
 // const thBeamLength = sheet.object('Beam Length',{
 //     x:types.number()
 // })
+// Play the animation on repeat
 
 function animate() {
 
@@ -289,7 +288,7 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
-
+project.ready.then(() => sheet.sequence.play({ iterationCount: Infinity }))
 
 
 var config = {
