@@ -6,11 +6,10 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { getProject, types } from '@theatre/core';
 import projectState from '../public/assets/jsons/controls3.json';
 
-console.log("projectState--->",projectState)
+console.log("projectState--->", projectState)
 const loader = new GLTFLoader();
 var scene, camera, renderer, container;
 var Ambient, sunLight;
-var LaserBeam1;
 
 container = document.getElementById('canvas-div');
 
@@ -18,7 +17,7 @@ container = document.getElementById('canvas-div');
 // theatre ....................................
 //studio.initialize()
 
- const project = getProject('THREE.js x Theatre.js',{ state: projectState })
+const project = getProject('THREE.js x Theatre.js', { state: projectState })
 //const project = getProject('THREE.js x Theatre.js')
 const sheet = project.sheet('Animated scene')
 
@@ -139,10 +138,10 @@ var vector = new THREE.Vector3;
 
 // })
 const thReflector1 = sheet.object('Reflector1', {
-    
-    
+
+
     Camera: types.compound({
-       
+
     }),
     camerePosition: types.compound({
         x: types.number(camera.position.x, { range: [-100, 100] }),
@@ -159,9 +158,9 @@ const thReflector1 = sheet.object('Reflector1', {
 
 
     Reflector1: types.compound({
-       
+
     }),
-    
+
     ref1Position: types.compound({
         x: types.number(meshRefletor1.position.x, { range: [-50, 50] }),
         y: types.number(meshRefletor1.position.y, { range: [-50, 50] }),
@@ -179,7 +178,7 @@ const thReflector1 = sheet.object('Reflector1', {
     }),
 
     RayBeam1: types.compound({
-       
+
     }),
 
     leser1Position: types.compound({
@@ -196,14 +195,14 @@ const thReflector1 = sheet.object('Reflector1', {
         z: types.number(LaserBeam1.object3d.scale.z, { range: [0, 200] }),
     }),
 
-    
+
 })
 thReflector1.onValuesChange((values) => {
     meshRefletor1.position.set(values.ref1Position.x, values.ref1Position.y, values.ref1Position.z);
     meshRefletor1.rotation.set(values.ref1Rotation.x, values.ref1Rotation.y, values.ref1Rotation.z);
     meshRefletor1.scale.set(values.ref1Scale.x, values.ref1Scale.y, values.ref1Scale.z);
 
-// laser beam on change
+    // laser beam on change
 
     LaserBeam1.object3d.position.set(values.leser1Position.x, values.leser1Position.y, values.leser1Position.z);
     // LaserBeam1.object3d.position.set(values.intersect.x , values.intersect.y , values.intersect.z )
@@ -216,7 +215,7 @@ thReflector1.onValuesChange((values) => {
     config.length = values.leser1Scale.z;
     //LaserBeam1.hiddenReflectObject();
 
-// camera  on change
+    // camera  on change
     camera.position.set(values.camerePosition.x, values.camerePosition.y, values.camerePosition.z)
     camera.lookAt(values.cameraLookAt.x, values.cameraLookAt.y, values.cameraLookAt.z)
 
@@ -303,7 +302,7 @@ function LaserBeam(iconfig) {
     //     length: config1.length, //theatre var 1 for beam len
     //     reflectMax: 1
     // };
-    
+
 
     config = $.extend(config, iconfig);
 
@@ -440,34 +439,6 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
 let eyeScene = null;
-document.onkeydown = function (e) {
-    console.log("pkp:  ~ file: script.js:238 ~ e:", e)
-    switch (e.key) {
-        case "a":
-            eyeScene.rotation.y += 0.1;
-            break;
-        case "d":
-            eyeScene.rotation.y -= 0.1;
-            break;
-        case "w":
-            eyeScene.scale.x += 0.1;
-            eyeScene.scale.y += 0.1;
-            eyeScene.scale.z += 0.1;
-            break;
-        case "s":
-            eyeScene.scale.x -= 0.1;
-            eyeScene.scale.y -= 0.1;
-            eyeScene.scale.z -= 0.1;
-            break;
-        case "ArrowDown":
-            eyeScene.position.y -= 1;
-            break;
-        case "ArrowUp":
-            console.log("pkp:  ~ file: script.js:242 ~ up eyeScene:", eyeScene)
-            eyeScene.position.y += 1;
-            break;
-    }
-};
 
 // Load a glTF resource
 function loadGLTF() {
