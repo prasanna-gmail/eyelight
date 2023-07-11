@@ -89,7 +89,7 @@ objectArray.push(meshRefletor2);
 scene.add(meshRefletor2);
 
 var LaserBeam1 = new LaserBeam({
-    reflectMax: 5
+    reflectMax: 10
 
 });
 
@@ -107,60 +107,87 @@ function add2Scene(obj) {
 
 /// **************************theatre animation and controles...............***********************
 var vector = new THREE.Vector3;
-const thLaserbeam = sheet.object('Laser Beam1', {
+// const thLaserbeam = sheet.object('Laser Beam1', {
 
 
-    position: types.compound({
-        x: types.number(LaserBeam1.object3d.position.x, { range: [-100, 100] }),
-        y: types.number(LaserBeam1.object3d.position.y, { range: [-100, 100] }),
-        z: types.number(LaserBeam1.object3d.position.z, { range: [-100, 100] }),
-    }),
-    intersect: types.compound({
-        x: types.number(vector.x, { range: [-200, 0] }),
-        y: types.number(vector.y, { range: [-50, 0] }),
-        z: types.number(vector.z, { range: [-50, 0] }),
-    }),
-    scale: types.compound({
-        z: types.number(LaserBeam1.object3d.scale.z, { range: [0, 200] }),
-    }),
+//     position: types.compound({
+//         x: types.number(LaserBeam1.object3d.position.x, { range: [-100, 100] }),
+//         y: types.number(LaserBeam1.object3d.position.y, { range: [-100, 100] }),
+//         z: types.number(LaserBeam1.object3d.position.z, { range: [-100, 100] }),
+//     }),
+//     intersect: types.compound({
+//         x: types.number(vector.x, { range: [-200, 0] }),
+//         y: types.number(vector.y, { range: [-50, 0] }),
+//         z: types.number(vector.z, { range: [-50, 0] }),
+//     }),
+//     scale: types.compound({
+//         z: types.number(LaserBeam1.object3d.scale.z, { range: [0, 200] }),
+//     }),
 
-})
+// })
 
-thLaserbeam.onValuesChange((values) => {
+// thLaserbeam.onValuesChange((values) => {
 
-    LaserBeam1.object3d.position.set(values.position.x, values.position.y, values.position.z);
-    // LaserBeam1.object3d.position.set(values.intersect.x , values.intersect.y , values.intersect.z )
+//     LaserBeam1.object3d.position.set(values.position.x, values.position.y, values.position.z);
+//     // LaserBeam1.object3d.position.set(values.intersect.x , values.intersect.y , values.intersect.z )
 
-    LaserBeam1.intersect(
+//     LaserBeam1.intersect(
 
-        new THREE.Vector3(values.intersect.x, values.intersect.y, values.intersect.z), objectArray
-    );
-    //LaserBeam1.object3d.scale.z=  values.scale.z;
-    config.length = values.scale.z;
-    //LaserBeam1.hiddenReflectObject();
+//         new THREE.Vector3(values.intersect.x, values.intersect.y, values.intersect.z), objectArray
+//     );
+//     //LaserBeam1.object3d.scale.z=  values.scale.z;
+//     config.length = values.scale.z;
+//     //LaserBeam1.hiddenReflectObject();
 
-})
+// })
 const thReflector1 = sheet.object('Reflector1', {
-    position: types.compound({
+    ref1Position: types.compound({
         x: types.number(meshRefletor1.position.x, { range: [-50, 50] }),
         y: types.number(meshRefletor1.position.y, { range: [-50, 50] }),
         z: types.number(meshRefletor1.position.z, { range: [-50, 50] })
     }),
-    rotation: types.compound({
+    ref1Rotation: types.compound({
         x: types.number(meshRefletor1.rotation.x, { range: [-10, 10] }),
         y: types.number(meshRefletor1.rotation.y, { range: [-10, 10] }),
         z: types.number(meshRefletor1.rotation.z, { range: [-10, 10] })
     }),
-    scale: types.compound({
+    ref1Scale: types.compound({
         x: types.number(meshRefletor1.scale.x, { range: [0, 10] }),
         y: types.number(meshRefletor1.scale.y, { range: [0, 10] }),
         z: types.number(meshRefletor1.scale.z, { range: [0, 10] })
-    })
+    }),
+
+    leser1Position: types.compound({
+        x: types.number(LaserBeam1.object3d.position.x, { range: [-100, 100] }),
+        y: types.number(LaserBeam1.object3d.position.y, { range: [-100, 100] }),
+        z: types.number(LaserBeam1.object3d.position.z, { range: [-100, 100] }),
+    }),
+    leser1Intersect: types.compound({
+        x: types.number(vector.x, { range: [-200, 0] }),
+        y: types.number(vector.y, { range: [-50, 0] }),
+        z: types.number(vector.z, { range: [-50, 0] }),
+    }),
+    leser1Scale: types.compound({
+        z: types.number(LaserBeam1.object3d.scale.z, { range: [0, 200] }),
+    }),
 })
 thReflector1.onValuesChange((values) => {
-    meshRefletor1.position.set(values.position.x, values.position.y, values.position.z)
-    meshRefletor1.rotation.set(values.rotation.x, values.rotation.y, values.rotation.z)
-    meshRefletor1.scale.set(values.scale.x, values.scale.y, values.scale.z)
+    meshRefletor1.position.set(values.ref1Position.x, values.ref1Position.y, values.ref1Position.z);
+    meshRefletor1.rotation.set(values.ref1Rotation.x, values.ref1Rotation.y, values.ref1Rotation.z);
+    meshRefletor1.scale.set(values.ref1Scale.x, values.ref1Scale.y, values.ref1Scale.z);
+
+
+
+    LaserBeam1.object3d.position.set(values.leser1Position.x, values.leser1Position.y, values.leser1Position.z);
+    // LaserBeam1.object3d.position.set(values.intersect.x , values.intersect.y , values.intersect.z )
+
+    LaserBeam1.intersect(
+
+        new THREE.Vector3(values.leser1Intersect.x, values.leser1Intersect.y, values.leser1Intersect.z), objectArray
+    );
+    //LaserBeam1.object3d.scale.z=  values.scale.z;
+    config.length = values.leser1Scale.z;
+    //LaserBeam1.hiddenReflectObject();
 
 })
 
@@ -176,9 +203,9 @@ const thReflector2 = sheet.object('Reflector2', {
         z: types.number(meshRefletor2.rotation.z, { range: [-1, 1] })
     }),
     scale: types.compound({
-        x: types.number(meshRefletor2.scale.x, { range: [0, 10] }),
-        y: types.number(meshRefletor2.scale.y, { range: [0, 10] }),
-        z: types.number(meshRefletor2.scale.z, { range: [0, 10] })
+        x: types.number(meshRefletor2.scale.x, { range: [0, 1] }),
+        y: types.number(meshRefletor2.scale.y, { range: [0, 1] }),
+        z: types.number(meshRefletor2.scale.z, { range: [0, 1] })
     })
 })
 thReflector2.onValuesChange((values) => {
@@ -233,14 +260,18 @@ animate();
 
 
 var config = {
-    length: 90, //theatre var 1 for beam len
-    reflectMax: 1
+    length: 0, //theatre var 1 for beam len
+    reflectMax: 10
 };
 
 
 
 function LaserBeam(iconfig) {
-
+    // var config = {
+    //     length: config1.length, //theatre var 1 for beam len
+    //     reflectMax: 1
+    // };
+    
 
     config = $.extend(config, iconfig);
 
