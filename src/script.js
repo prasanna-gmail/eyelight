@@ -19,14 +19,6 @@ var config2 = {
     length: 0, //theatre var 1 for beam len
     reflectMax: 10
 };
-var config3 = {
-    length: 0, //theatre var 1 for beam len
-    reflectMax: 10
-};
-var config4 = {
-    length: 0, //theatre var 1 for beam len
-    reflectMax: 10
-};
 container = document.getElementById('canvas-div');
 
 
@@ -113,22 +105,11 @@ var LaserBeam2s = new LaserBeam2({
 
 });
 
-var LaserBeam3s = new LaserBeam3({
-    reflectMax: 10,
-    length:0
 
-});
-var LaserBeam4s = new LaserBeam4({
-    reflectMax: 10,
-    length:0
-
-});
 
 
 add2Scene(LaserBeam1s);
 add2Scene(LaserBeam2s);
-add2Scene(LaserBeam3s);
-add2Scene(LaserBeam4s);
 function add2Scene(obj) {
     scene.add(obj.object3d);
     scene.add(obj.pointLight);
@@ -191,6 +172,10 @@ const thReflector1 = sheet.object('Reflector1', {
         x: types.number(0, { range: [-100, 100] }),
         y: types.number(0, { range: [-100, 100] }),
         z: types.number(0, { range: [-100, 100] }),
+    }),
+    cameraFov: types.compound({
+        x: types.number(camera.fov, { range: [-10, 200] }),
+        
     }),
 
 
@@ -255,6 +240,8 @@ thReflector1.onValuesChange((values) => {
 // camera  on change
     camera.position.set(values.camerePosition.x, values.camerePosition.y, values.camerePosition.z)
     camera.lookAt(values.cameraLookAt.x, values.cameraLookAt.y, values.cameraLookAt.z)
+    camera.fov=values.cameraFov.x;
+    camera.updateProjectionMatrix();
 
 })
 
@@ -311,77 +298,6 @@ thReflector2.onValuesChange((values) => {
     config2.length = values.leser2Scale.z;
 })
 
-
-const thRay3 = sheet.object('RayBeam3', {
-   
-
-
-    RayBeam3: types.compound({
-       
-    }),
-
-    leser3Position: types.compound({
-        x: types.number(LaserBeam3s.object3d.position.x, { range: [-100, 100] }),
-        y: types.number(LaserBeam3s.object3d.position.y, { range: [-100, 100] }),
-        z: types.number(LaserBeam3s.object3d.position.z, { range: [-100, 100] }),
-    }),
-    leser3Intersect: types.compound({
-        x: types.number(vector.x, { range: [-200, 0] }),
-        y: types.number(vector.y, { range: [-50, 0] }),
-        z: types.number(vector.z, { range: [-50, 0] }),
-    }),
-    leser3Scale: types.compound({
-        z: types.number(LaserBeam3s.object3d.scale.z, { range: [0, 200] }),
-    }),
-
-})
-thRay3.onValuesChange((values) => {
-
-    LaserBeam3s.object3d.position.set(values.leser3Position.x, values.leser3Position.y, values.leser3Position.z);
-    // LaserBeam1.object3d.position.set(values.intersect.x , values.intersect.y , values.intersect.z )
-
-    LaserBeam3s.intersect(
-
-        new THREE.Vector3(values.leser3Intersect.x, values.leser3Intersect.y, values.leser3Intersect.z), objectArray
-    );
-    config3.length = values.leser3Scale.z;
-})
-
-
-const thRay4 = sheet.object('RayBeam4', {
-   
-
-
-    RayBeam4: types.compound({
-       
-    }),
-
-    leser4Position: types.compound({
-        x: types.number(LaserBeam4s.object3d.position.x, { range: [-100, 100] }),
-        y: types.number(LaserBeam4s.object3d.position.y, { range: [-100, 100] }),
-        z: types.number(LaserBeam4s.object3d.position.z, { range: [-100, 100] }),
-    }),
-    leser4Intersect: types.compound({
-        x: types.number(vector.x, { range: [-200, 0] }),
-        y: types.number(vector.y, { range: [-50, 0] }),
-        z: types.number(vector.z, { range: [-50, 0] }),
-    }),
-    leser4Scale: types.compound({
-        z: types.number(LaserBeam4s.object3d.scale.z, { range: [0, 200] }),
-    }),
-
-})
-thRay4.onValuesChange((values) => {
-
-    LaserBeam4s.object3d.position.set(values.leser4Position.x, values.leser4Position.y, values.leser4Position.z);
-    // LaserBeam1.object3d.position.set(values.intersect.x , values.intersect.y , values.intersect.z )
-
-    LaserBeam4s.intersect(
-
-        new THREE.Vector3(values.leser4Intersect.x, values.leser4Intersect.y, values.leser4Intersect.z), objectArray
-    );
-    config4.length = values.leser4Scale.z;
-})
 
 // const thCamera = sheet.object('Cemera', {
 //     position: types.compound({
@@ -700,276 +616,7 @@ function LaserBeam2(iconfig) {
     }
 
 }
-function LaserBeam3(iconfig) {
-    // var config = {
-    //     length: config1.length, //theatre var 1 for beam len
-    //     reflectMax: 1
-    // };
-    
 
-    var config = $.extend(config3, iconfig);
-
-    this.object3d = new THREE.Object3D();
-    this.reflectObject = null;
-    this.pointLight = new THREE.PointLight(0xffffff, 1, 4);
-    var raycaster = new THREE.Raycaster();
-    var canvas = generateLaserBodyCanvas();
-    var texture = new THREE.Texture(canvas);
-    texture.needsUpdate = true;
-
-    //texture
-    var material = new THREE.MeshBasicMaterial({
-        map: texture,
-        blending: THREE.AdditiveBlending,
-        color: 0x4444aa,
-        side: THREE.DoubleSide,
-        depthWrite: false,
-        transparent: true
-    });
-    var geometry = new THREE.PlaneGeometry(1, 4);
-    //  var geometry = new THREE.PlaneGeometry(1,9);
-    geometry.rotateY(0.5 * Math.PI);
-
-    //use planes to simulate laserbeam
-    var i, nPlanes = 15;
-    for (i = 0; i < nPlanes; i++) {
-        var mesh = new THREE.Mesh(geometry, material);
-        mesh.position.z = 1 / 2;
-        mesh.rotation.z = i / nPlanes * Math.PI;
-        this.object3d.add(mesh);
-    }
-
-    if (config.reflectMax > 0)
-        this.reflectObject = new LaserBeam3($.extend(config, {
-            reflectMax: config.reflectMax - 1
-        }));
-
-
-    this.intersect = function (direction, objectArray = []) {
-
-        raycaster.set(
-            this.object3d.position.clone(),
-            direction.clone().normalize()
-        );
-
-        var intersectArray = [];
-        intersectArray = raycaster.intersectObjects(objectArray, true);
-
-        //have collision
-        if (intersectArray.length > 0) {
-            this.object3d.scale.z = intersectArray[0].distance;
-            this.object3d.lookAt(intersectArray[0].point.clone());
-            this.pointLight.visible = true;
-
-            //get normal vector
-            var normalMatrix = new THREE.Matrix3().getNormalMatrix(intersectArray[0].object.matrixWorld);
-            var normalVector = intersectArray[0].face.normal.clone().applyMatrix3(normalMatrix).normalize();
-
-            //set pointLight under plane
-            this.pointLight.position.x = intersectArray[0].point.x + normalVector.x * 0.5;
-            this.pointLight.position.y = intersectArray[0].point.y + normalVector.y * 0.5;
-            this.pointLight.position.z = intersectArray[0].point.z + normalVector.z * 0.5;
-
-            //calculation reflect vector
-            var reflectVector = new THREE.Vector3(
-                intersectArray[0].point.x - this.object3d.position.x,
-                intersectArray[0].point.y - this.object3d.position.y,
-                intersectArray[0].point.z - this.object3d.position.z
-            ).normalize().reflect(normalVector);
-
-            //set reflectObject
-            if (this.reflectObject != null) {
-                this.reflectObject.object3d.visible = true;
-                this.reflectObject.object3d.position.set(
-                    intersectArray[0].point.x,
-                    intersectArray[0].point.y,
-                    intersectArray[0].point.z
-                );
-
-                //iteration reflect
-                this.reflectObject.intersect(reflectVector.clone(), objectArray);
-            }
-        }
-        //non collision
-        else {
-            console.log("config3.length--->", config3.length)
-            this.object3d.scale.z = config3.length;
-            this.pointLight.visible = false;
-            this.object3d.lookAt(
-                this.object3d.position.x + direction.x,
-                this.object3d.position.y + direction.y,
-                this.object3d.position.z + direction.z
-            );
-
-            this.hiddenReflectObject();
-        }
-    }
-
-    this.hiddenReflectObject = function () {
-        if (this.reflectObject != null) {
-            this.reflectObject.object3d.visible = false;
-            this.reflectObject.pointLight.visible = false;
-            this.reflectObject.hiddenReflectObject();
-        }
-    }
-
-    return;
-
-    function generateLaserBodyCanvas() {
-        var canvas = document.createElement('canvas');
-        var context = canvas.getContext('2d');
-        canvas.width = 1;
-        canvas.height = 64;
-        // set gradient
-        var gradient = context.createLinearGradient(0, 0, canvas.width, canvas.height);
-        gradient.addColorStop(0, 'rgba(  0,  0,  0,0.1)');
-        gradient.addColorStop(0.1, 'rgba(160,160,160,0.3)');
-        gradient.addColorStop(0.5, 'rgba(255,255,255,0.5)');
-        gradient.addColorStop(0.9, 'rgba(160,160,160,0.3)');
-        gradient.addColorStop(1.0, 'rgba(  0,  0,  0,0.1)');
-        // fill the rectangle
-        context.fillStyle = gradient;
-        context.fillRect(0, 0, canvas.width, canvas.height);
-        // return the just built canvas 
-        return canvas;
-    }
-
-}
-function LaserBeam4(iconfig) {
-    // var config = {
-    //     length: config1.length, //theatre var 1 for beam len
-    //     reflectMax: 1
-    // };
-    
-
-    var config = $.extend(config4, iconfig);
-
-    this.object3d = new THREE.Object3D();
-    this.reflectObject = null;
-    this.pointLight = new THREE.PointLight(0xffffff, 1, 4);
-    var raycaster = new THREE.Raycaster();
-    var canvas = generateLaserBodyCanvas();
-    var texture = new THREE.Texture(canvas);
-    texture.needsUpdate = true;
-
-    //texture
-    var material = new THREE.MeshBasicMaterial({
-        map: texture,
-        blending: THREE.AdditiveBlending,
-        color: 0x4444aa,
-        side: THREE.DoubleSide,
-        depthWrite: false,
-        transparent: true
-    });
-    var geometry = new THREE.PlaneGeometry(1, 4);
-    //  var geometry = new THREE.PlaneGeometry(1,9);
-    geometry.rotateY(0.5 * Math.PI);
-
-    //use planes to simulate laserbeam
-    var i, nPlanes = 15;
-    for (i = 0; i < nPlanes; i++) {
-        var mesh = new THREE.Mesh(geometry, material);
-        mesh.position.z = 1 / 2;
-        mesh.rotation.z = i / nPlanes * Math.PI;
-        this.object3d.add(mesh);
-    }
-
-    if (config.reflectMax > 0)
-        this.reflectObject = new LaserBeam4($.extend(config, {
-            reflectMax: config.reflectMax - 1
-        }));
-
-
-    this.intersect = function (direction, objectArray = []) {
-
-        raycaster.set(
-            this.object3d.position.clone(),
-            direction.clone().normalize()
-        );
-
-        var intersectArray = [];
-        intersectArray = raycaster.intersectObjects(objectArray, true);
-
-        //have collision
-        if (intersectArray.length > 0) {
-            this.object3d.scale.z = intersectArray[0].distance;
-            this.object3d.lookAt(intersectArray[0].point.clone());
-            this.pointLight.visible = true;
-
-            //get normal vector
-            var normalMatrix = new THREE.Matrix3().getNormalMatrix(intersectArray[0].object.matrixWorld);
-            var normalVector = intersectArray[0].face.normal.clone().applyMatrix3(normalMatrix).normalize();
-
-            //set pointLight under plane
-            this.pointLight.position.x = intersectArray[0].point.x + normalVector.x * 0.5;
-            this.pointLight.position.y = intersectArray[0].point.y + normalVector.y * 0.5;
-            this.pointLight.position.z = intersectArray[0].point.z + normalVector.z * 0.5;
-
-            //calculation reflect vector
-            var reflectVector = new THREE.Vector3(
-                intersectArray[0].point.x - this.object3d.position.x,
-                intersectArray[0].point.y - this.object3d.position.y,
-                intersectArray[0].point.z - this.object3d.position.z
-            ).normalize().reflect(normalVector);
-
-            //set reflectObject
-            if (this.reflectObject != null) {
-                this.reflectObject.object3d.visible = true;
-                this.reflectObject.object3d.position.set(
-                    intersectArray[0].point.x,
-                    intersectArray[0].point.y,
-                    intersectArray[0].point.z
-                );
-
-                //iteration reflect
-                this.reflectObject.intersect(reflectVector.clone(), objectArray);
-            }
-        }
-        //non collision
-        else {
-            console.log("config4.length--->", config4.length)
-            this.object3d.scale.z = config4.length;
-            this.pointLight.visible = false;
-            this.object3d.lookAt(
-                this.object3d.position.x + direction.x,
-                this.object3d.position.y + direction.y,
-                this.object3d.position.z + direction.z
-            );
-
-            this.hiddenReflectObject();
-        }
-    }
-
-    this.hiddenReflectObject = function () {
-        if (this.reflectObject != null) {
-            this.reflectObject.object3d.visible = false;
-            this.reflectObject.pointLight.visible = false;
-            this.reflectObject.hiddenReflectObject();
-        }
-    }
-
-    return;
-
-    function generateLaserBodyCanvas() {
-        var canvas = document.createElement('canvas');
-        var context = canvas.getContext('2d');
-        canvas.width = 1;
-        canvas.height = 64;
-        // set gradient
-        var gradient = context.createLinearGradient(0, 0, canvas.width, canvas.height);
-        gradient.addColorStop(0, 'rgba(  0,  0,  0,0.1)');
-        gradient.addColorStop(0.1, 'rgba(160,160,160,0.3)');
-        gradient.addColorStop(0.5, 'rgba(255,255,255,0.5)');
-        gradient.addColorStop(0.9, 'rgba(160,160,160,0.3)');
-        gradient.addColorStop(1.0, 'rgba(  0,  0,  0,0.1)');
-        // fill the rectangle
-        context.fillStyle = gradient;
-        context.fillRect(0, 0, canvas.width, canvas.height);
-        // return the just built canvas 
-        return canvas;
-    }
-
-}
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
