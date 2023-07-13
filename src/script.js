@@ -2,6 +2,7 @@ import * as THREE from 'three'
 console.log("pkp:  ~ file: script.js:2 ~ THREE:", THREE)
 import $ from "jquery";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 //import studio from '@theatre/studio'
 import { getProject, types } from '@theatre/core';
 import normalVision from '../public/assets/jsons/animationControls2.json';
@@ -62,7 +63,8 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x222222);
 container.appendChild(renderer.domElement);
 window.addEventListener('resize', onWindowResize, false);
-
+const controls = new OrbitControls( camera, renderer.domElement );
+controls.update();
 //AmbientLight
 Ambient = new THREE.AmbientLight(0xffffff, 0.2);
 scene.add(Ambient);
@@ -345,6 +347,7 @@ function animate() {
     camera.lookAt(scene.position);
 
     renderer.render(scene, camera);
+    controls.update();
 }
 animate();
 
