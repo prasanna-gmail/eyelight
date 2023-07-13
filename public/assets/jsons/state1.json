@@ -1,0 +1,85 @@
+{
+  "sheetsById": {
+    "Animated scene": {
+      "staticOverrides": {
+        "byObject": {
+          "Reflector1": {
+            "leser1Scale": {
+              "z": 60
+            },
+            "camerePosition": {
+              "x": 8,
+              "y": 77,
+              "z": 100
+            },
+            "ref1Position": {
+              "x": 15.821094793057418,
+              "y": -28,
+              "z": -36
+            },
+            "leser1Position": {
+              "x": 100,
+              "y": -28,
+              "z": -36
+            },
+            "ref1Rotation": {
+              "x": 3.24,
+              "y": 0,
+              "z": 4.52
+            },
+            "ref1Scale": {
+              "x": 0.01,
+              "y": 0.122,
+              "z": 0.1
+            },
+            "leser1Intersect": {
+              "x": -1,
+              "y": 0,
+              "z": -3.552713678800501e-15
+            },
+            "cameraFov": {
+              "x": 60
+            },
+            "cameraLookAt": {
+              "x": -22.785936804628392,
+              "y": 15.190624536418904
+            }
+          },
+          "Reflector2": {
+            "ref2Position": {
+              "x": 18.797656134104734,
+              "y": -52,
+              "z": -23
+            },
+            "ref2Rotation": {
+              "x": 2.4430379746835493,
+              "y": 1.8101265822784816,
+              "z": 4.051645569620252
+            },
+            "ref2Scale": {
+              "x": 0.012609405132768203,
+              "y": 0.01,
+              "z": 0.1
+            },
+            "leser2Position": {
+              "x": 100,
+              "y": -52,
+              "z": -23
+            },
+            "leser2Intersect": {
+              "x": -90
+            },
+            "leser2Scale": {
+              "z": 60
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "O78XE4OBf5Rh9xPW",
+    "QTRsI0P0tXMdgKgA"
+  ]
+}

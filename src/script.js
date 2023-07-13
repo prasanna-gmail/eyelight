@@ -3,7 +3,8 @@ console.log("pkp:  ~ file: script.js:2 ~ THREE:", THREE)
 import $ from "jquery";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-//import studio from '@theatre/studio'
+// step 1 studio mode
+import studio from '@theatre/studio'
 import { getProject, types } from '@theatre/core';
 import normalVision from '../public/assets/jsons/animationControls2.json';
 import myopicVision from '../public/assets/jsons/myopicVision.json';
@@ -11,6 +12,10 @@ import myopicVision from '../public/assets/jsons/myopicVision.json';
 const loader = new GLTFLoader();
 var scene, camera, renderer, container;
 var Ambient, sunLight;
+var globalVars = {
+    thickness: 4.1,
+    reflectorColor: 0xffffff
+}
 var config1 = {
     length: 0, //theatre var 1 for beam len
     reflectMax: 10
@@ -24,20 +29,24 @@ container = document.getElementById('canvas-div');
 
 
 // theatre ....................................
-//studio.initialize()
+// step 2 studio mode
+studio.initialize()
 
- var project;
+var project;
 var sheet;
 
- 
- function initProjet(){
-   project = getProject('THREE.js x Theatre.js',{ state: normalVision })
-    //    project = getProject('THREE.js x Theatre.js')
-     sheet = project.sheet('Animated scene')
-     project.ready.then(() => sheet.sequence.play({ iterationCount: 1 }))
- }
 
- initProjet();
+function initProjet() {
+    // step 3 runtime mode
+    // project = getProject('THREE.js x Theatre.js', { state: normalVision })
+    // step 3 studio mode
+    project = getProject('THREE.js x Theatre.js')
+    sheet = project.sheet('Animated scene')
+    // step 4 runtime mode
+    // project.ready.then(() => sheet.sequence.play({ iterationCount: 1 }))
+}
+
+initProjet();
 //scene
 scene = new THREE.Scene();
 camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 200000);
@@ -63,7 +72,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x222222);
 container.appendChild(renderer.domElement);
 window.addEventListener('resize', onWindowResize, false);
-const controls = new OrbitControls( camera, renderer.domElement );
+const controls = new OrbitControls(camera, renderer.domElement);
 controls.update();
 //AmbientLight
 Ambient = new THREE.AmbientLight(0xffffff, 0.2);
@@ -79,7 +88,7 @@ var Geometry, Material;
 var objectArray = [];
 Geometry = new THREE.BoxGeometry(4, 8, 10);
 Material = new THREE.MeshPhongMaterial({
-    color: 0xffffff
+    color: globalVars.reflectorColor
 });
 var meshRefletor1 = new THREE.Mesh(Geometry, Material);
 
@@ -197,9 +206,9 @@ const thReflector1 = sheet.object('Reflector1', {
         z: types.number(meshRefletor1.position.z, { range: [-50, 50] })
     }),
     ref1Rotation: types.compound({
-        x: types.number(meshRefletor1.rotation.x, { range: [0, 7] }),
-        y: types.number(meshRefletor1.rotation.y, { range: [0, 7] }),
-        z: types.number(meshRefletor1.rotation.z, { range: [0, 7] })
+        x: types.number(meshRefletor1.rotation.x, { range: [-10, 10] }),
+        y: types.number(meshRefletor1.rotation.y, { range: [-10, 10] }),
+        z: types.number(meshRefletor1.rotation.z, { range: [-10, 10] })
     }),
     ref1Scale: types.compound({
         x: types.number(meshRefletor1.scale.x, { range: [0, 10] }),
@@ -217,9 +226,9 @@ const thReflector1 = sheet.object('Reflector1', {
         z: types.number(LaserBeam1s.object3d.position.z, { range: [-100, 100] }),
     }),
     leser1Intersect: types.compound({
-        x: types.number(vector.x, { range: [-200, 0] }),
-        y: types.number(vector.y, { range: [-50, 0] }),
-        z: types.number(vector.z, { range: [-50, 0] }),
+        x: types.number(vector.x, { range: [-200, 110] }),
+        y: types.number(vector.y, { range: [-50, 110] }),
+        z: types.number(vector.z, { range: [-50, 110] }),
     }),
     leser1Scale: types.compound({
         z: types.number(LaserBeam1s.object3d.scale.z, { range: [0, 200] }),
@@ -384,7 +393,7 @@ function LaserBeam1(iconfig) {
     /**
      * thickness of beam 1
      */
-    var geometry = new THREE.PlaneGeometry(1, 1);
+    var geometry = new THREE.PlaneGeometry(1, globalVars.thickness);
     //  var geometry = new THREE.PlaneGeometry(1,9);
     geometry.rotateY(0.5 * Math.PI);
 
@@ -522,7 +531,7 @@ function LaserBeam2(iconfig) {
     /**
      * thickness of beam 2
      */
-    var geometry = new THREE.PlaneGeometry(1, 1);
+    var geometry = new THREE.PlaneGeometry(1, globalVars.thickness);
     //  var geometry = new THREE.PlaneGeometry(1,9);
     geometry.rotateY(0.5 * Math.PI);
 
@@ -714,14 +723,14 @@ function loadGLTF() {
 }
 loadGLTF();
 
-export const  thAnimPause =()=>{
+export const thAnimPause = () => {
     console.warn(sheet.sequence.pointer.playing)
     sheet.sequence.pause()
 }
-window.thAnimPause=thAnimPause;
+window.thAnimPause = thAnimPause;
 
 
-export const thAnimPlay=()=>{
+export const thAnimPlay = () => {
     sheet.sequence.play()
 }
-window.thAnimPlay=thAnimPlay;
+window.thAnimPlay = thAnimPlay;
