@@ -5,7 +5,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 //import studio from '@theatre/studio'
 import { getProject, types } from '@theatre/core';
-import projectState from '../public/assets/jsons/controls4.json';
+import projectState from '../public/assets/jsons/animationState1.json';
 
 console.log("projectState--->",projectState)
 const loader = new GLTFLoader();
@@ -34,11 +34,11 @@ container = document.getElementById('canvas-div');
 // theatre ....................................
 //studio.initialize()
 
- const project = getProject('THREE.js x Theatre.js',{ state: projectState })
-//const project = getProject('THREE.js x Theatre.js')
+const project = getProject('THREE.js x Theatre.js',{ state: projectState })
+// const project = getProject('THREE.js x Theatre.js')
 const sheet = project.sheet('Animated scene')
 
-
+project.ready.then(() => sheet.sequence.play({ iterationCount: 1  }))
 
 //scene
 scene = new THREE.Scene();
@@ -434,7 +434,7 @@ function animate() {
 controls.update();
 }
 animate();
-project.ready.then(() => sheet.sequence.play({ iterationCount: 1  }))
+
 
 
 
