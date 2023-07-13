@@ -2,9 +2,10 @@ import * as THREE from 'three'
 console.log("pkp:  ~ file: script.js:2 ~ THREE:", THREE)
 import $ from "jquery";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import studio from '@theatre/studio'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+//import studio from '@theatre/studio'
 import { getProject, types } from '@theatre/core';
-import projectState from '../public/assets/jsons/controls3.json';
+import projectState from '../public/assets/jsons/controls4.json';
 
 console.log("projectState--->",projectState)
 const loader = new GLTFLoader();
@@ -31,10 +32,10 @@ container = document.getElementById('canvas-div');
 
 
 // theatre ....................................
-studio.initialize()
+//studio.initialize()
 
- //const project = getProject('THREE.js x Theatre.js',{ state: projectState })
-const project = getProject('THREE.js x Theatre.js')
+ const project = getProject('THREE.js x Theatre.js',{ state: projectState })
+//const project = getProject('THREE.js x Theatre.js')
 const sheet = project.sheet('Animated scene')
 
 
@@ -64,8 +65,10 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x222222);
 container.appendChild(renderer.domElement);
 window.addEventListener('resize', onWindowResize, false);
-
+const controls = new OrbitControls( camera, renderer.domElement );
 //AmbientLight
+
+controls.update();
 Ambient = new THREE.AmbientLight(0xffffff, 0.2);
 scene.add(Ambient);
 
@@ -81,25 +84,25 @@ Geometry = new THREE.BoxGeometry(4, 8, 10);
 Material = new THREE.MeshPhongMaterial({
     color: 0x00ff00
 });
-var meshRefletor1 = new THREE.Mesh(Geometry, Material);
+// var meshRefletor1 = new THREE.Mesh(Geometry, Material);
 
-meshRefletor1.position.set(
-    20,
-    0,
-    -6
-);
-objectArray.push(meshRefletor1);
-scene.add(meshRefletor1);
+// meshRefletor1.position.set(
+//     20,
+//     0,
+//     -6
+// );
+// objectArray.push(meshRefletor1);
+// scene.add(meshRefletor1);
 
-var meshRefletor2 = new THREE.Mesh(Geometry, Material);
+// var meshRefletor2 = new THREE.Mesh(Geometry, Material);
 
-meshRefletor2.position.set(
-    25,
-    0,
-    -6
-);
-objectArray.push(meshRefletor2);
-scene.add(meshRefletor2);
+// meshRefletor2.position.set(
+//     25,
+//     0,
+//     -6
+// );
+// objectArray.push(meshRefletor2);
+// scene.add(meshRefletor2);
 
 var LaserBeam1s = new LaserBeam1({
     reflectMax: 10,
@@ -175,7 +178,7 @@ var vector = new THREE.Vector3;
 //     //LaserBeam1.hiddenReflectObject();
 
 // })
-const thReflector1 = sheet.object('Reflector1', {
+const thRay1 = sheet.object('RayBeam1', {
     
     
     Camera: types.compound({
@@ -191,28 +194,31 @@ const thReflector1 = sheet.object('Reflector1', {
         x: types.number(0, { range: [-100, 100] }),
         y: types.number(0, { range: [-100, 100] }),
         z: types.number(0, { range: [-100, 100] }),
+    }) ,
+    cameraFov: types.compound({
+        x: types.number(camera.fov, { range: [-10, 200] }),
+        
     }),
 
-
-    Reflector1: types.compound({
+    // Reflector1: types.compound({
        
-    }),
+    // }),
     
-    ref1Position: types.compound({
-        x: types.number(meshRefletor1.position.x, { range: [-50, 50] }),
-        y: types.number(meshRefletor1.position.y, { range: [-50, 50] }),
-        z: types.number(meshRefletor1.position.z, { range: [-50, 50] })
-    }),
-    ref1Rotation: types.compound({
-        x: types.number(meshRefletor1.rotation.x, { range: [-10, 10] }),
-        y: types.number(meshRefletor1.rotation.y, { range: [-10, 10] }),
-        z: types.number(meshRefletor1.rotation.z, { range: [-10, 10] })
-    }),
-    ref1Scale: types.compound({
-        x: types.number(meshRefletor1.scale.x, { range: [0, 10] }),
-        y: types.number(meshRefletor1.scale.y, { range: [0, 10] }),
-        z: types.number(meshRefletor1.scale.z, { range: [0, 10] })
-    }),
+    // ref1Position: types.compound({
+    //     x: types.number(meshRefletor1.position.x, { range: [-50, 50] }),
+    //     y: types.number(meshRefletor1.position.y, { range: [-50, 50] }),
+    //     z: types.number(meshRefletor1.position.z, { range: [-50, 50] })
+    // }),
+    // ref1Rotation: types.compound({
+    //     x: types.number(meshRefletor1.rotation.x, { range: [-10, 10] }),
+    //     y: types.number(meshRefletor1.rotation.y, { range: [-10, 10] }),
+    //     z: types.number(meshRefletor1.rotation.z, { range: [-10, 10] })
+    // }),
+    // ref1Scale: types.compound({
+    //     x: types.number(meshRefletor1.scale.x, { range: [0, 10] }),
+    //     y: types.number(meshRefletor1.scale.y, { range: [0, 10] }),
+    //     z: types.number(meshRefletor1.scale.z, { range: [0, 10] })
+    // }),
 
     RayBeam1: types.compound({
        
@@ -224,9 +230,9 @@ const thReflector1 = sheet.object('Reflector1', {
         z: types.number(LaserBeam1s.object3d.position.z, { range: [-100, 100] }),
     }),
     leser1Intersect: types.compound({
-        x: types.number(vector.x, { range: [-200, 0] }),
-        y: types.number(vector.y, { range: [-50, 0] }),
-        z: types.number(vector.z, { range: [-50, 0] }),
+        x: types.number(vector.x, { range: [-500, 100] }),
+        y: types.number(vector.y, { range: [-50, 100] }),
+        z: types.number(vector.z, { range: [-50, 100] }),
     }),
     leser1Scale: types.compound({
         z: types.number(LaserBeam1s.object3d.scale.z, { range: [0, 200] }),
@@ -234,10 +240,10 @@ const thReflector1 = sheet.object('Reflector1', {
 
     
 })
-thReflector1.onValuesChange((values) => {
-    meshRefletor1.position.set(values.ref1Position.x, values.ref1Position.y, values.ref1Position.z);
-    meshRefletor1.rotation.set(values.ref1Rotation.x, values.ref1Rotation.y, values.ref1Rotation.z);
-    meshRefletor1.scale.set(values.ref1Scale.x, values.ref1Scale.y, values.ref1Scale.z);
+thRay1.onValuesChange((values) => {
+    // meshRefletor1.position.set(values.ref1Position.x, values.ref1Position.y, values.ref1Position.z);
+    // meshRefletor1.rotation.set(values.ref1Rotation.x, values.ref1Rotation.y, values.ref1Rotation.z);
+    // meshRefletor1.scale.set(values.ref1Scale.x, values.ref1Scale.y, values.ref1Scale.z);
 
 // laser beam on change
 
@@ -255,25 +261,26 @@ thReflector1.onValuesChange((values) => {
 // camera  on change
     camera.position.set(values.camerePosition.x, values.camerePosition.y, values.camerePosition.z)
     camera.lookAt(values.cameraLookAt.x, values.cameraLookAt.y, values.cameraLookAt.z)
-
+    camera.fov=values.cameraFov.x;
+    camera.updateProjectionMatrix();
 })
 
-const thReflector2 = sheet.object('Reflector2', {
-    ref2Position: types.compound({
-        x: types.number(meshRefletor2.position.x, { range: [-50, 50] }),
-        y: types.number(meshRefletor2.position.y, { range: [-100, 50] }),
-        z: types.number(meshRefletor2.position.z, { range: [-50, 50] })
-    }),
-    ref2Rotation: types.compound({
-        x: types.number(meshRefletor2.rotation.x, { range: [-10, 10] }),
-        y: types.number(meshRefletor2.rotation.y, { range: [-10, 10] }),
-        z: types.number(meshRefletor2.rotation.z, { range: [-10, 10] })
-    }),
-    ref2Scale: types.compound({
-        x: types.number(meshRefletor2.scale.x, { range: [0, 1] }),
-        y: types.number(meshRefletor2.scale.y, { range: [0, 1] }),
-        z: types.number(meshRefletor2.scale.z, { range: [0, 1] })
-    }),
+const thRay2 = sheet.object('RayBeam2', {
+    // ref2Position: types.compound({
+    //     x: types.number(meshRefletor2.position.x, { range: [-50, 50] }),
+    //     y: types.number(meshRefletor2.position.y, { range: [-100, 50] }),
+    //     z: types.number(meshRefletor2.position.z, { range: [-50, 50] })
+    // }),
+    // ref2Rotation: types.compound({
+    //     x: types.number(meshRefletor2.rotation.x, { range: [-10, 10] }),
+    //     y: types.number(meshRefletor2.rotation.y, { range: [-10, 10] }),
+    //     z: types.number(meshRefletor2.rotation.z, { range: [-10, 10] })
+    // }),
+    // ref2Scale: types.compound({
+    //     x: types.number(meshRefletor2.scale.x, { range: [0, 1] }),
+    //     y: types.number(meshRefletor2.scale.y, { range: [0, 1] }),
+    //     z: types.number(meshRefletor2.scale.z, { range: [0, 1] })
+    // }),
 
 
     RayBeam2: types.compound({
@@ -286,19 +293,19 @@ const thReflector2 = sheet.object('Reflector2', {
         z: types.number(LaserBeam2s.object3d.position.z, { range: [-100, 100] }),
     }),
     leser2Intersect: types.compound({
-        x: types.number(vector.x, { range: [-200, 0] }),
-        y: types.number(vector.y, { range: [-50, 0] }),
-        z: types.number(vector.z, { range: [-50, 0] }),
+        x: types.number(vector.x, { range: [-200, 50] }),
+        y: types.number(vector.y, { range: [-50, 50] }),
+        z: types.number(vector.z, { range: [-50, 50] }),
     }),
     leser2Scale: types.compound({
         z: types.number(LaserBeam1s.object3d.scale.z, { range: [0, 200] }),
     }),
 
 })
-thReflector2.onValuesChange((values) => {
-    meshRefletor2.position.set(values.ref2Position.x, values.ref2Position.y, values.ref2Position.z)
-    meshRefletor2.rotation.set(values.ref2Rotation.x, values.ref2Rotation.y, values.ref2Rotation.z)
-    meshRefletor2.scale.set(values.ref2Scale.x, values.ref2Scale.y, values.ref2Scale.z)
+thRay2.onValuesChange((values) => {
+    // meshRefletor2.position.set(values.ref2Position.x, values.ref2Position.y, values.ref2Position.z)
+    // meshRefletor2.rotation.set(values.ref2Rotation.x, values.ref2Rotation.y, values.ref2Rotation.z)
+    // meshRefletor2.scale.set(values.ref2Scale.x, values.ref2Scale.y, values.ref2Scale.z)
 
 
     LaserBeam2s.object3d.position.set(values.leser2Position.x, values.leser2Position.y, values.leser2Position.z);
@@ -326,9 +333,9 @@ const thRay3 = sheet.object('RayBeam3', {
         z: types.number(LaserBeam3s.object3d.position.z, { range: [-100, 100] }),
     }),
     leser3Intersect: types.compound({
-        x: types.number(vector.x, { range: [-200, 0] }),
-        y: types.number(vector.y, { range: [-50, 0] }),
-        z: types.number(vector.z, { range: [-50, 0] }),
+        x: types.number(vector.x, { range: [-200, 150] }),
+        y: types.number(vector.y, { range: [-50, 150] }),
+        z: types.number(vector.z, { range: [-50, 150] }),
     }),
     leser3Scale: types.compound({
         z: types.number(LaserBeam3s.object3d.scale.z, { range: [0, 200] }),
@@ -362,9 +369,9 @@ const thRay4 = sheet.object('RayBeam4', {
         z: types.number(LaserBeam4s.object3d.position.z, { range: [-100, 100] }),
     }),
     leser4Intersect: types.compound({
-        x: types.number(vector.x, { range: [-200, 0] }),
-        y: types.number(vector.y, { range: [-50, 0] }),
-        z: types.number(vector.z, { range: [-50, 0] }),
+        x: types.number(vector.x, { range: [-200, 50] }),
+        y: types.number(vector.y, { range: [-50, 50] }),
+        z: types.number(vector.z, { range: [-50, 50] }),
     }),
     leser4Scale: types.compound({
         z: types.number(LaserBeam4s.object3d.scale.z, { range: [0, 200] }),
@@ -423,9 +430,11 @@ function animate() {
     camera.lookAt(scene.position);
 
     renderer.render(scene, camera);
+    
+controls.update();
 }
 animate();
-//project.ready.then(() => sheet.sequence.play({ iterationCount: Infinity }))
+project.ready.then(() => sheet.sequence.play({ iterationCount: 1  }))
 
 
 
@@ -976,34 +985,7 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
 let eyeScene = null;
-document.onkeydown = function (e) {
-    console.log("pkp:  ~ file: script.js:238 ~ e:", e)
-    switch (e.key) {
-        case "a":
-            eyeScene.rotation.y += 0.1;
-            break;
-        case "d":
-            eyeScene.rotation.y -= 0.1;
-            break;
-        case "w":
-            eyeScene.scale.x += 0.1;
-            eyeScene.scale.y += 0.1;
-            eyeScene.scale.z += 0.1;
-            break;
-        case "s":
-            eyeScene.scale.x -= 0.1;
-            eyeScene.scale.y -= 0.1;
-            eyeScene.scale.z -= 0.1;
-            break;
-        case "ArrowDown":
-            eyeScene.position.y -= 1;
-            break;
-        case "ArrowUp":
-            console.log("pkp:  ~ file: script.js:242 ~ up eyeScene:", eyeScene)
-            eyeScene.position.y += 1;
-            break;
-    }
-};
+
 
 // Load a glTF resource
 function loadGLTF() {

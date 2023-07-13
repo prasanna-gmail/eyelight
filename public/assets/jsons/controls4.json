@@ -1,0 +1,362 @@
+{
+  "sheetsById": {
+    "Animated scene": {
+      "staticOverrides": {
+        "byObject": {
+          "Reflector1": {
+            "camerePosition": {
+              "x": 8,
+              "y": 77,
+              "z": 100
+            },
+            "ref1Position": {
+              "x": 19,
+              "y": -30,
+              "z": -36
+            },
+            "ref1Rotation": {
+              "x": 1.679,
+              "y": 6.456
+            },
+            "ref1Scale": {
+              "x": 0.15,
+              "y": 0.01,
+              "z": 0.01
+            },
+            "leser1Position": {
+              "x": 19,
+              "y": -30,
+              "z": -36
+            },
+            "leser1Intersect": {
+              "x": 10
+            },
+            "leser1Scale": {
+              "z": 74.68354430379746
+            },
+            "cameraFov": {
+              "x": 81.70886075949365
+            }
+          },
+          "Reflector2": {
+            "leser2Scale": {
+              "z": 31.64556962025317
+            },
+            "ref2Position": {
+              "x": 21,
+              "z": -23,
+              "y": -52
+            },
+            "ref2Scale": {
+              "x": 0.13101453574606944,
+              "y": 0.01,
+              "z": 0.01
+            },
+            "ref2Rotation": {
+              "x": 3.2,
+              "y": 6.472
+            },
+            "leser2Position": {
+              "x": 19,
+              "y": -30,
+              "z": -36
+            },
+            "leser2Intersect": {
+              "x": -90
+            }
+          },
+          "RayBeam3": {
+            "leser3Scale": {
+              "z": 0
+            },
+            "leser3Intersect": {
+              "x": -90
+            },
+            "leser3Position": {
+              "x": 100,
+              "y": -52,
+              "z": -23
+            }
+          },
+          "RayBeam4": {
+            "leser4Scale": {
+              "z": 0
+            },
+            "leser4Position": {
+              "x": 21,
+              "y": -52,
+              "z": -23
+            },
+            "leser4Intersect": {
+              "x": -119.3117,
+              "y": 5.695,
+              "z": -27.217
+            }
+          },
+          "RayBeam1": {
+            "camerePosition": {
+              "x": 8,
+              "y": 77,
+              "z": 100
+            },
+            "leser1Position": {
+              "x": 120,
+              "y": -30,
+              "z": -36
+            },
+            "leser1Intersect": {
+              "x": -90,
+              "y": 0
+            },
+            "leser1Scale": {
+              "z": 0
+            },
+            "cameraFov": {
+              "x": 103.86075949367083
+            }
+          },
+          "RayBeam2": {
+            "leser2Position": {
+              "x": 19,
+              "y": -30,
+              "z": -36
+            },
+            "leser2Intersect": {
+              "x": -80.507,
+              "y": -29.115,
+              "z": -0.63
+            },
+            "leser2Scale": {
+              "z": 0
+            }
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 10,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Reflector1": {
+            "trackData": {},
+            "trackIdByPropPath": {}
+          },
+          "RayBeam1": {
+            "trackData": {
+              "cEFYyXeSmn": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "RayBeam1:[\"leser1Scale\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "8aUtMUyXF-",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "Vq1omL8zWa",
+                    "position": 5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 86
+                  },
+                  {
+                    "id": "YbWSzccPTP",
+                    "position": 9,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"leser1Scale\",\"z\"]": "cEFYyXeSmn"
+            }
+          },
+          "RayBeam2": {
+            "trackData": {
+              "nc6_HiWdvN": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "RayBeam2:[\"leser2Scale\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "bvuf8t5_gw",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.01
+                  },
+                  {
+                    "id": "gZmUj04Teu",
+                    "position": 5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "ZxZOB6Md0l",
+                    "position": 9,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 56
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"leser2Scale\",\"z\"]": "nc6_HiWdvN"
+            }
+          },
+          "RayBeam3": {
+            "trackData": {
+              "v7kpTnApdj": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "RayBeam3:[\"leser3Scale\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "R7f_hjkQ0g",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "uZdPeUYfuG",
+                    "position": 5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 80
+                  },
+                  {
+                    "id": "EXRvhM7TIi",
+                    "position": 9,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"leser3Scale\",\"z\"]": "v7kpTnApdj"
+            }
+          },
+          "RayBeam4": {
+            "trackData": {
+              "NyinJ-yB-Z": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "RayBeam4:[\"leser4Scale\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "xVVaiYGcXn",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.01
+                  },
+                  {
+                    "id": "9VpvTJUSH_",
+                    "position": 5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "-1gQYjUJmD",
+                    "position": 9,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 56
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"leser4Scale\",\"z\"]": "NyinJ-yB-Z"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "ReoqsLWaWyItJW4T",
+    "XO3ktGi6SPeQGDPG",
+    "OXI220LrKvg1iQkL"
+  ]
+}
