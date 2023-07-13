@@ -1035,3 +1035,14 @@ function loadGLTF() {
 loadGLTF();
 
 
+export const thAnimPause = () => {
+    console.warn(sheet.sequence.pointer.playing)
+    sheet.sequence.pause()
+}
+window.thAnimPause = thAnimPause;
+
+
+export const thAnimPlay = () => {
+    sheet.sequence.play()
+}
+window.thAnimPlay = thAnimPlay;
