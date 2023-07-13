@@ -11,6 +11,12 @@ console.log("projectState--->",projectState)
 const loader = new GLTFLoader();
 var scene, camera, renderer, container;
 var Ambient, sunLight;
+
+var globalVars = {
+    thickness: 4.1,
+    reflectorColor: 0xffffff
+}
+
 var config1 = {
     length: 0, //theatre var 1 for beam len
     reflectMax: 10
@@ -82,7 +88,7 @@ var Geometry, Material;
 var objectArray = [];
 Geometry = new THREE.BoxGeometry(4, 8, 10);
 Material = new THREE.MeshPhongMaterial({
-    color: 0x00ff00
+    color: globalVars.reflectorColor
 });
 // var meshRefletor1 = new THREE.Mesh(Geometry, Material);
 
@@ -465,7 +471,7 @@ function LaserBeam1(iconfig) {
         depthWrite: false,
         transparent: true
     });
-    var geometry = new THREE.PlaneGeometry(1, 4);
+    var geometry = new THREE.PlaneGeometry(1, globalVars.thickness);
     //  var geometry = new THREE.PlaneGeometry(1,9);
     geometry.rotateY(0.5 * Math.PI);
 
@@ -600,7 +606,7 @@ function LaserBeam2(iconfig) {
         depthWrite: false,
         transparent: true
     });
-    var geometry = new THREE.PlaneGeometry(1, 4);
+    var geometry = new THREE.PlaneGeometry(1, globalVars.thickness);
     //  var geometry = new THREE.PlaneGeometry(1,9);
     geometry.rotateY(0.5 * Math.PI);
 
@@ -735,7 +741,7 @@ function LaserBeam3(iconfig) {
         depthWrite: false,
         transparent: true
     });
-    var geometry = new THREE.PlaneGeometry(1, 4);
+    var geometry = new THREE.PlaneGeometry(1, globalVars.thickness);
     //  var geometry = new THREE.PlaneGeometry(1,9);
     geometry.rotateY(0.5 * Math.PI);
 
@@ -870,7 +876,7 @@ function LaserBeam4(iconfig) {
         depthWrite: false,
         transparent: true
     });
-    var geometry = new THREE.PlaneGeometry(1, 4);
+    var geometry = new THREE.PlaneGeometry(1, globalVars.thickness);
     //  var geometry = new THREE.PlaneGeometry(1,9);
     geometry.rotateY(0.5 * Math.PI);
 

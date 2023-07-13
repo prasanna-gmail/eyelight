@@ -2,7 +2,8 @@ body {margin: 0; height: 100%; overflow: hidden}
 #button-container{
     position: absolute;
     bottom: 10px;
-    left:15px
+    left:15px;
+    
 }
 .animBtn{
     position: relative;
@@ -20,6 +21,9 @@ body {margin: 0; height: 100%; overflow: hidden}
     -moz-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
     cursor: pointer;
+    height: 45px;
+    display: inline-block;
+    margin-left: 5px;
 }
 
 .animBtn:hover {
