@@ -4,7 +4,7 @@ import $ from "jquery";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 // step 1 studio mode
-import studio from '@theatre/studio'
+//import studio from '@theatre/studio'
 import { getProject, types } from '@theatre/core';
 import normalVision from '../public/assets/jsons/animationControls2.json';
 import myopicVision from '../public/assets/jsons/myopicVision.json';
@@ -30,7 +30,7 @@ container = document.getElementById('canvas-div');
 
 // theatre ....................................
 // step 2 studio mode
-studio.initialize()
+//studio.initialize()
 
 var project;
 var sheet;
@@ -38,12 +38,12 @@ var sheet;
 
 function initProjet() {
     // step 3 runtime mode
-    // project = getProject('THREE.js x Theatre.js', { state: normalVision })
+    project = getProject('THREE.js x Theatre.js', { state: normalVision })
     // step 3 studio mode
-    project = getProject('THREE.js x Theatre.js')
+    // project = getProject('THREE.js x Theatre.js')
     sheet = project.sheet('Animated scene')
     // step 4 runtime mode
-    // project.ready.then(() => sheet.sequence.play({ iterationCount: 1 }))
+    project.ready.then(() => sheet.sequence.play({ iterationCount: 1 }))
 }
 
 initProjet();
