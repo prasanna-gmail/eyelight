@@ -6,7 +6,7 @@ import studio from '@theatre/studio'
 import { getProject, types } from '@theatre/core';
 import projectState from '../public/assets/jsons/controls3.json';
 
-console.log("projectState--->",projectState)
+console.log("projectState--->", projectState)
 const loader = new GLTFLoader();
 var scene, camera, renderer, container;
 var Ambient, sunLight;
@@ -25,7 +25,7 @@ container = document.getElementById('canvas-div');
 // theatre ....................................
 studio.initialize()
 
- //const project = getProject('THREE.js x Theatre.js',{ state: projectState })
+//const project = getProject('THREE.js x Theatre.js',{ state: projectState })
 const project = getProject('THREE.js x Theatre.js')
 const sheet = project.sheet('Animated scene')
 
@@ -71,7 +71,7 @@ var Geometry, Material;
 var objectArray = [];
 Geometry = new THREE.BoxGeometry(4, 8, 10);
 Material = new THREE.MeshPhongMaterial({
-    color: 0x00ff00
+    color: 0xffffff
 });
 var meshRefletor1 = new THREE.Mesh(Geometry, Material);
 
@@ -95,13 +95,13 @@ scene.add(meshRefletor2);
 
 var LaserBeam1s = new LaserBeam1({
     reflectMax: 10,
-    length:0
+    length: 0
 
 });
 
 var LaserBeam2s = new LaserBeam2({
     reflectMax: 10,
-    length:0
+    length: 0
 
 });
 
@@ -157,16 +157,16 @@ var vector = new THREE.Vector3;
 
 // })
 const thReflector1 = sheet.object('Reflector1', {
-    
-    
+
+
     Camera: types.compound({
-       
+
     }),
 
     camerePosition: types.compound({
-        x: types.number(camera.position.x, { range: [-100, 100] }),
-        y: types.number(camera.position.y, { range: [-100, 100] }),
-        z: types.number(camera.position.z, { range: [-100, 100] }),
+        x: types.number(camera.position.x, { range: [-900, 900] }),
+        y: types.number(camera.position.y, { range: [-900, 900] }),
+        z: types.number(camera.position.z, { range: [-900, 900] }),
     }),
     cameraLookAt: types.compound({
         x: types.number(0, { range: [-100, 100] }),
@@ -175,23 +175,23 @@ const thReflector1 = sheet.object('Reflector1', {
     }),
     cameraFov: types.compound({
         x: types.number(camera.fov, { range: [-10, 200] }),
-        
+
     }),
 
 
     Reflector1: types.compound({
-       
+
     }),
-    
+
     ref1Position: types.compound({
         x: types.number(meshRefletor1.position.x, { range: [-50, 50] }),
         y: types.number(meshRefletor1.position.y, { range: [-50, 50] }),
         z: types.number(meshRefletor1.position.z, { range: [-50, 50] })
     }),
     ref1Rotation: types.compound({
-        x: types.number(meshRefletor1.rotation.x, { range: [-10, 10] }),
-        y: types.number(meshRefletor1.rotation.y, { range: [-10, 10] }),
-        z: types.number(meshRefletor1.rotation.z, { range: [-10, 10] })
+        x: types.number(meshRefletor1.rotation.x, { range: [0, 7] }),
+        y: types.number(meshRefletor1.rotation.y, { range: [0, 7] }),
+        z: types.number(meshRefletor1.rotation.z, { range: [0, 7] })
     }),
     ref1Scale: types.compound({
         x: types.number(meshRefletor1.scale.x, { range: [0, 10] }),
@@ -200,7 +200,7 @@ const thReflector1 = sheet.object('Reflector1', {
     }),
 
     RayBeam1: types.compound({
-       
+
     }),
 
     leser1Position: types.compound({
@@ -217,14 +217,14 @@ const thReflector1 = sheet.object('Reflector1', {
         z: types.number(LaserBeam1s.object3d.scale.z, { range: [0, 200] }),
     }),
 
-    
+
 })
 thReflector1.onValuesChange((values) => {
     meshRefletor1.position.set(values.ref1Position.x, values.ref1Position.y, values.ref1Position.z);
     meshRefletor1.rotation.set(values.ref1Rotation.x, values.ref1Rotation.y, values.ref1Rotation.z);
     meshRefletor1.scale.set(values.ref1Scale.x, values.ref1Scale.y, values.ref1Scale.z);
 
-// laser beam on change
+    // laser beam on change
 
     LaserBeam1s.object3d.position.set(values.leser1Position.x, values.leser1Position.y, values.leser1Position.z);
     // LaserBeam1.object3d.position.set(values.intersect.x , values.intersect.y , values.intersect.z )
@@ -237,10 +237,10 @@ thReflector1.onValuesChange((values) => {
     config1.length = values.leser1Scale.z;
     //LaserBeam1s.hiddenReflectObject();
 
-// camera  on change
+    // camera  on change
     camera.position.set(values.camerePosition.x, values.camerePosition.y, values.camerePosition.z)
     camera.lookAt(values.cameraLookAt.x, values.cameraLookAt.y, values.cameraLookAt.z)
-    camera.fov=values.cameraFov.x;
+    camera.fov = values.cameraFov.x;
     camera.updateProjectionMatrix();
 
 })
@@ -252,9 +252,9 @@ const thReflector2 = sheet.object('Reflector2', {
         z: types.number(meshRefletor2.position.z, { range: [-50, 50] })
     }),
     ref2Rotation: types.compound({
-        x: types.number(meshRefletor2.rotation.x, { range: [-10, 10] }),
-        y: types.number(meshRefletor2.rotation.y, { range: [-10, 10] }),
-        z: types.number(meshRefletor2.rotation.z, { range: [-10, 10] })
+        x: types.number(meshRefletor2.rotation.x, { range: [0, 5] }),
+        y: types.number(meshRefletor2.rotation.y, { range: [0, 5] }),
+        z: types.number(meshRefletor2.rotation.z, { range: [0, 5] })
     }),
     ref2Scale: types.compound({
         x: types.number(meshRefletor2.scale.x, { range: [0, 1] }),
@@ -264,7 +264,7 @@ const thReflector2 = sheet.object('Reflector2', {
 
 
     RayBeam2: types.compound({
-       
+
     }),
 
     leser2Position: types.compound({
@@ -351,7 +351,7 @@ function LaserBeam1(iconfig) {
     //     length: config1.length, //theatre var 1 for beam len
     //     reflectMax: 1
     // };
-    
+
 
     var config = $.extend(config1, iconfig);
 
@@ -372,7 +372,10 @@ function LaserBeam1(iconfig) {
         depthWrite: false,
         transparent: true
     });
-    var geometry = new THREE.PlaneGeometry(1, 4);
+    /**
+     * thickness of beam 1
+     */
+    var geometry = new THREE.PlaneGeometry(1, 1);
     //  var geometry = new THREE.PlaneGeometry(1,9);
     geometry.rotateY(0.5 * Math.PI);
 
@@ -486,7 +489,7 @@ function LaserBeam2(iconfig) {
     //     length: config1.length, //theatre var 1 for beam len
     //     reflectMax: 1
     // };
-    
+
 
     var config = $.extend(config2, iconfig);
 
@@ -507,7 +510,10 @@ function LaserBeam2(iconfig) {
         depthWrite: false,
         transparent: true
     });
-    var geometry = new THREE.PlaneGeometry(1, 4);
+    /**
+     * thickness of beam 2
+     */
+    var geometry = new THREE.PlaneGeometry(1, 1);
     //  var geometry = new THREE.PlaneGeometry(1,9);
     geometry.rotateY(0.5 * Math.PI);
 
