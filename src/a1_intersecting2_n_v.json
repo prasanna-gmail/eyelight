@@ -1,0 +1,2386 @@
+{
+    "historic": {
+        "currentCommitHash": "eef6437d-5938-4f39-9a03-7c8d62838063",
+        "commitsByHash": {
+            "143183b6-1746-401b-a32f-09125c70e6f4": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 3.3925233644859834
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 3.734312416555409
+                    }
+                ],
+                "timestamp": 1689234527867,
+                "hash": "143183b6-1746-401b-a32f-09125c70e6f4"
+            },
+            "3a622e56-477c-4952-9cb0-14de5faa7729": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.512683578104139
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2.025367156208278
+                    }
+                ],
+                "timestamp": 1689234536474,
+                "hash": "3a622e56-477c-4952-9cb0-14de5faa7729"
+            },
+            "5e02ced7-7fbe-4476-a855-5568a6265a2e": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/y",
+                        "value": 1
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/y",
+                        "value": 1.170894526034713
+                    }
+                ],
+                "timestamp": 1689234538731,
+                "hash": "5e02ced7-7fbe-4476-a855-5568a6265a2e"
+            },
+            "ef1bef52-ae56-4394-a913-825d193e7212": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/x",
+                        "value": 0.5442812639074308
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/x",
+                        "value": 1
+                    }
+                ],
+                "timestamp": 1689234580423,
+                "hash": "ef1bef52-ae56-4394-a913-825d193e7212"
+            },
+            "b7ee4d45-bb3c-49b3-aed1-73b2e0e4c890": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/z",
+                        "value": 0.3543984572021943
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/z",
+                        "value": 0.8860703159768579
+                    }
+                ],
+                "timestamp": 1689234588299,
+                "hash": "b7ee4d45-bb3c-49b3-aed1-73b2e0e4c890"
+            },
+            "423d269d-7cb9-4920-b664-867bac39ccc3": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 55.69620253164558
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 107.59493670886076
+                    }
+                ],
+                "timestamp": 1689234594108,
+                "hash": "423d269d-7cb9-4920-b664-867bac39ccc3"
+            },
+            "5ddd500d-06db-40a2-9d64-86361282d8fa": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 64.55696202531647
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 55.69620253164558
+                    }
+                ],
+                "timestamp": 1689234596898,
+                "hash": "5ddd500d-06db-40a2-9d64-86361282d8fa"
+            },
+            "bfd3c9e1-f144-46c5-aedb-a41319c141b5": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 55
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 64.55696202531647
+                    }
+                ],
+                "timestamp": 1689234608709,
+                "hash": "bfd3c9e1-f144-46c5-aedb-a41319c141b5"
+            },
+            "9d89b98a-955f-4855-93fd-b8eaae68eff6": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689234608808,
+                "hash": "9d89b98a-955f-4855-93fd-b8eaae68eff6"
+            },
+            "6b501c5f-dfde-461f-991f-f2ae96d867e8": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 55
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 97.97468354430379
+                    }
+                ],
+                "timestamp": 1689234613042,
+                "hash": "6b501c5f-dfde-461f-991f-f2ae96d867e8"
+            },
+            "8bd52526-c9ca-48a8-a2b3-a9cb589f3bba": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 57.53164556962025
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 55
+                    }
+                ],
+                "timestamp": 1689234619550,
+                "hash": "8bd52526-c9ca-48a8-a2b3-a9cb589f3bba"
+            },
+            "1e20ec6a-56ca-4c64-8bd9-9b4032f12c7c": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 56
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 57.53164556962025
+                    }
+                ],
+                "timestamp": 1689234624109,
+                "hash": "1e20ec6a-56ca-4c64-8bd9-9b4032f12c7c"
+            },
+            "1bd087c1-c6ed-4df6-b1a2-d180c29f86df": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689234628342,
+                "hash": "1bd087c1-c6ed-4df6-b1a2-d180c29f86df"
+            },
+            "20922f28-e69c-4c08-9058-cf1c457deb9b": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 56
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 55
+                    }
+                ],
+                "timestamp": 1689234632341,
+                "hash": "20922f28-e69c-4c08-9058-cf1c457deb9b"
+            },
+            "9083c626-03af-4133-96f8-9603b8b92b96": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689234652643,
+                "hash": "9083c626-03af-4133-96f8-9603b8b92b96"
+            },
+            "d47fa66e-09db-450d-9a9f-9fed7de31d6e": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 48.40506329113924
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 56
+                    }
+                ],
+                "timestamp": 1689234723725,
+                "hash": "d47fa66e-09db-450d-9a9f-9fed7de31d6e"
+            },
+            "6fdb770c-4c39-4d90-b72d-6eb7b827876c": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 63.59493670886076
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 48.40506329113924
+                    }
+                ],
+                "timestamp": 1689234737592,
+                "hash": "6fdb770c-4c39-4d90-b72d-6eb7b827876c"
+            },
+            "538eab71-8ba2-473f-b2bc-f82e9fc7bf6c": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689234740867,
+                "hash": "538eab71-8ba2-473f-b2bc-f82e9fc7bf6c"
+            },
+            "5793bf13-7b44-48e1-b4da-b7f01ee75312": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 59.79746835443038
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 56
+                    }
+                ],
+                "timestamp": 1689234743975,
+                "hash": "5793bf13-7b44-48e1-b4da-b7f01ee75312"
+            },
+            "2f77263b-169f-45d7-9ca6-1bc6455e6c48": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 68.65822784810126
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 59.79746835443038
+                    }
+                ],
+                "timestamp": 1689234766099,
+                "hash": "2f77263b-169f-45d7-9ca6-1bc6455e6c48"
+            },
+            "bffe2980-67e6-46c2-a2ed-943adf0c565f": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689234776776,
+                "hash": "bffe2980-67e6-46c2-a2ed-943adf0c565f"
+            },
+            "76a3ded4-6463-4a99-a726-8d8373358d8a": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 22.7848101265823
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 29.430379746835463
+                    }
+                ],
+                "timestamp": 1689234784341,
+                "hash": "76a3ded4-6463-4a99-a726-8d8373358d8a"
+            },
+            "cc9459bd-2121-48fd-bf65-82aa86751c87": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/y",
+                        "value": 76.99999999999997
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/y",
+                        "value": 77
+                    }
+                ],
+                "timestamp": 1689234788956,
+                "hash": "cc9459bd-2121-48fd-bf65-82aa86751c87"
+            },
+            "f4a00027-5dff-4a62-ad10-bff96ba5ba64": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/z",
+                        "value": 31.64218958611484
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/z",
+                        "value": 100
+                    }
+                ],
+                "timestamp": 1689234792456,
+                "hash": "f4a00027-5dff-4a62-ad10-bff96ba5ba64"
+            },
+            "57ac8f44-f243-4ea8-be7f-a494e4b09b7e": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/y",
+                        "value": 42.821094793057384
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/y",
+                        "value": 76.99999999999997
+                    }
+                ],
+                "timestamp": 1689234796558,
+                "hash": "57ac8f44-f243-4ea8-be7f-a494e4b09b7e"
+            },
+            "dfb045a7-661b-4b8c-b208-cab50aa43f3b": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/x",
+                        "value": -26.178905206942588
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/x",
+                        "value": 8
+                    }
+                ],
+                "timestamp": 1689234800230,
+                "hash": "dfb045a7-661b-4b8c-b208-cab50aa43f3b"
+            },
+            "393d3917-70ab-41e3-af87-59ca6e5c2b52": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 37.40506329113926
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 22.7848101265823
+                    }
+                ],
+                "timestamp": 1689234808839,
+                "hash": "393d3917-70ab-41e3-af87-59ca6e5c2b52"
+            },
+            "a83fccc4-9246-48b6-9b40-b3b6883088d1": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689234818115,
+                "hash": "a83fccc4-9246-48b6-9b40-b3b6883088d1"
+            },
+            "72297eb6-4642-4afe-be08-a447900580da": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/x",
+                        "value": 0.4873164218958597
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/x",
+                        "value": 0.5442812639074308
+                    }
+                ],
+                "timestamp": 1689234858792,
+                "hash": "72297eb6-4642-4afe-be08-a447900580da"
+            },
+            "75b9b561-ed54-4f1d-9704-cd4ac7b2dec9": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689234860842,
+                "hash": "75b9b561-ed54-4f1d-9704-cd4ac7b2dec9"
+            },
+            "bd75b6de-5968-4e19-a7b7-47dd3d6646b8": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 34.746835443037995
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 37.40506329113926
+                    }
+                ],
+                "timestamp": 1689234865773,
+                "hash": "bd75b6de-5968-4e19-a7b7-47dd3d6646b8"
+            },
+            "f65a8d1e-058c-4210-8131-4cdef26ef1b9": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/z",
+                        "value": 100.00000000000001
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/z",
+                        "value": 31.64218958611484
+                    }
+                ],
+                "timestamp": 1689234874075,
+                "hash": "f65a8d1e-058c-4210-8131-4cdef26ef1b9"
+            },
+            "5e21b015-c5f8-44b9-b5a5-4e1c89579b49": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/y",
+                        "value": 111.17890520694256
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/y",
+                        "value": 42.821094793057384
+                    }
+                ],
+                "timestamp": 1689234877539,
+                "hash": "5e21b015-c5f8-44b9-b5a5-4e1c89579b49"
+            },
+            "c4200126-7bb1-4eb8-bee9-6730d718904c": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 16.13924050632916
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 34.746835443037995
+                    }
+                ],
+                "timestamp": 1689234883050,
+                "hash": "c4200126-7bb1-4eb8-bee9-6730d718904c"
+            },
+            "e6953140-7a91-40c2-bb10-04e41ec6e928": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/x",
+                        "value": 8
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/x",
+                        "value": -26.178905206942588
+                    }
+                ],
+                "timestamp": 1689234888925,
+                "hash": "e6953140-7a91-40c2-bb10-04e41ec6e928"
+            },
+            "2ad62ded-f4e2-43c6-acc7-467247530d15": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/y",
+                        "value": 213.71562082777035
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/y",
+                        "value": 111.17890520694256
+                    }
+                ],
+                "timestamp": 1689234895923,
+                "hash": "2ad62ded-f4e2-43c6-acc7-467247530d15"
+            },
+            "412e0b90-2079-4525-8ca2-3d554de643a2": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 8.164556962025355
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 16.13924050632916
+                    }
+                ],
+                "timestamp": 1689234904266,
+                "hash": "412e0b90-2079-4525-8ca2-3d554de643a2"
+            },
+            "c6658615-2151-4dc1-9b83-16d3e9384e14": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 66.12658227848101
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 63.59493670886076
+                    }
+                ],
+                "timestamp": 1689234913174,
+                "hash": "c6658615-2151-4dc1-9b83-16d3e9384e14"
+            },
+            "c3271b35-04cf-4eeb-9e26-cd5e967f4797": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 9.493670886075988
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 8.164556962025355
+                    }
+                ],
+                "timestamp": 1689234921591,
+                "hash": "c3271b35-04cf-4eeb-9e26-cd5e967f4797"
+            },
+            "b8f70673-519c-43f0-b30f-49e3ca8e1e65": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689234942756,
+                "hash": "b8f70673-519c-43f0-b30f-49e3ca8e1e65"
+            },
+            "e37dd7d2-7458-4abc-9b4f-c76de3ac158d": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/x",
+                        "value": 0.012609405132768203
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/x",
+                        "value": 0.4873164218958597
+                    }
+                ],
+                "timestamp": 1689234951157,
+                "hash": "e37dd7d2-7458-4abc-9b4f-c76de3ac158d"
+            },
+            "0a0ecb89-174e-4bfd-a32e-6722a786c1e7": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/z",
+                        "value": 0.10755080848538673
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/z",
+                        "value": 0.3543984572021943
+                    }
+                ],
+                "timestamp": 1689234960522,
+                "hash": "0a0ecb89-174e-4bfd-a32e-6722a786c1e7"
+            },
+            "a903d4aa-9690-450d-b66d-12dbdf9bc391": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 73.72151898734177
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 68.65822784810126
+                    }
+                ],
+                "timestamp": 1689234974399,
+                "hash": "a903d4aa-9690-450d-b66d-12dbdf9bc391"
+            },
+            "e43946ce-8e0a-4ba2-aff1-6fc9f14af8f8": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 80.0506329113924
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 73.72151898734177
+                    }
+                ],
+                "timestamp": 1689234997190,
+                "hash": "e43946ce-8e0a-4ba2-aff1-6fc9f14af8f8"
+            },
+            "4c5c6c42-a88e-4309-a184-170ebfc8abf4": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 101.56962025316454
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 80.0506329113924
+                    }
+                ],
+                "timestamp": 1689235028696,
+                "hash": "4c5c6c42-a88e-4309-a184-170ebfc8abf4"
+            },
+            "c672dab5-8293-4238-a617-c9d53377f8f4": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.170894526034713
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.512683578104139
+                    }
+                ],
+                "timestamp": 1689235035873,
+                "hash": "c672dab5-8293-4238-a617-c9d53377f8f4"
+            },
+            "d851952d-6f25-4718-a8b3-49dcd7316953": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 3.9052069425901217
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 3.3925233644859834
+                    }
+                ],
+                "timestamp": 1689235040329,
+                "hash": "d851952d-6f25-4718-a8b3-49dcd7316953"
+            },
+            "bc2f22c6-c235-49e5-a31b-033d117fc641": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 3.734312416555409
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 3.9052069425901217
+                    }
+                ],
+                "timestamp": 1689235045523,
+                "hash": "bc2f22c6-c235-49e5-a31b-033d117fc641"
+            },
+            "26455c40-0914-4cfe-8296-a8472ee4b78a": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/y",
+                        "value": 0.01
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/y",
+                        "value": 0.06957424714433919
+                    }
+                ],
+                "timestamp": 1689235061114,
+                "hash": "26455c40-0914-4cfe-8296-a8472ee4b78a"
+            },
+            "2fea3956-45ae-435b-a9f5-bbe99016bf60": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/z",
+                        "value": 0.1
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Scale/z",
+                        "value": 0.10755080848538673
+                    }
+                ],
+                "timestamp": 1689235067174,
+                "hash": "2fea3956-45ae-435b-a9f5-bbe99016bf60"
+            },
+            "d888dcb9-6ab0-4fe6-8acd-0562b39640ce": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.5
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.170894526034713
+                    }
+                ],
+                "timestamp": 1689235166325,
+                "hash": "d888dcb9-6ab0-4fe6-8acd-0562b39640ce"
+            },
+            "78e95945-0224-44bc-8682-829100a456a1": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 3.5
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 3.734312416555409
+                    }
+                ],
+                "timestamp": 1689235171973,
+                "hash": "78e95945-0224-44bc-8682-829100a456a1"
+            },
+            "c6223034-e508-4bb4-92c1-418db4ad1dcf": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 3.52
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 3.5
+                    }
+                ],
+                "timestamp": 1689235178662,
+                "hash": "c6223034-e508-4bb4-92c1-418db4ad1dcf"
+            },
+            "51fb3d66-c7d6-455b-be98-9508533a07dd": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.51
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.5
+                    }
+                ],
+                "timestamp": 1689235194572,
+                "hash": "51fb3d66-c7d6-455b-be98-9508533a07dd"
+            },
+            "3f8fd2c6-8ae5-4e53-b380-1cfb3e65d1b0": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.5126582278480927
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.51
+                    }
+                ],
+                "timestamp": 1689235213364,
+                "hash": "3f8fd2c6-8ae5-4e53-b380-1cfb3e65d1b0"
+            },
+            "2866177e-3c78-4c36-87f3-6921c933dccb": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.626582278481004
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.5126582278480927
+                    }
+                ],
+                "timestamp": 1689235223272,
+                "hash": "2866177e-3c78-4c36-87f3-6921c933dccb"
+            },
+            "d6264029-1b0d-4024-b6ca-ec17db7a519b": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/y",
+                        "value": 1.6835443037974693
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/y",
+                        "value": 1
+                    }
+                ],
+                "timestamp": 1689235235987,
+                "hash": "d6264029-1b0d-4024-b6ca-ec17db7a519b"
+            },
+            "11b7df35-38eb-4e96-a0d6-17826f8d101b": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 4.146582278481012
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 3.52
+                    }
+                ],
+                "timestamp": 1689235246763,
+                "hash": "11b7df35-38eb-4e96-a0d6-17826f8d101b"
+            },
+            "221b5b79-a76e-45b2-b78a-0a35e932d4f4": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.537974683544295
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.626582278481004
+                    }
+                ],
+                "timestamp": 1689235286636,
+                "hash": "221b5b79-a76e-45b2-b78a-0a35e932d4f4"
+            },
+            "7f46719f-70cd-48a0-a12d-c542b37a00d3": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 97.77215189873417
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 101.56962025316454
+                    }
+                ],
+                "timestamp": 1689235288446,
+                "hash": "7f46719f-70cd-48a0-a12d-c542b37a00d3"
+            },
+            "e25c3b2b-5003-46b4-8e92-a58521383181": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 1.537974683544295
+                    }
+                ],
+                "timestamp": 1689235295347,
+                "hash": "e25c3b2b-5003-46b4-8e92-a58521383181"
+            },
+            "fd24979d-4b47-488c-b23b-532be2940463": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 87.64556962025316
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 97.77215189873417
+                    }
+                ],
+                "timestamp": 1689235316628,
+                "hash": "fd24979d-4b47-488c-b23b-532be2940463"
+            },
+            "dd80cc01-84b5-4e68-a645-58f3530d210c": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2.126582278481013
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2
+                    }
+                ],
+                "timestamp": 1689235322212,
+                "hash": "dd80cc01-84b5-4e68-a645-58f3530d210c"
+            },
+            "88775bed-3a00-418f-9c48-37fff4e48154": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2.6329113924050693
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2.126582278481013
+                    }
+                ],
+                "timestamp": 1689235330396,
+                "hash": "88775bed-3a00-418f-9c48-37fff4e48154"
+            },
+            "bc3af112-7f7f-4007-91e7-1f3b8486bad3": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/y",
+                        "value": 1.8417721518987347
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/y",
+                        "value": 1.6835443037974693
+                    }
+                ],
+                "timestamp": 1689235334223,
+                "hash": "bc3af112-7f7f-4007-91e7-1f3b8486bad3"
+            },
+            "60c69ef9-4975-420d-b180-bcfc7cb13e45": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 4.114936708860759
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 4.146582278481012
+                    }
+                ],
+                "timestamp": 1689235338136,
+                "hash": "60c69ef9-4975-420d-b180-bcfc7cb13e45"
+            },
+            "9a0c741c-70b9-4378-9f3d-e047f7e06a57": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2.3481012658227893
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2.6329113924050693
+                    }
+                ],
+                "timestamp": 1689235344369,
+                "hash": "9a0c741c-70b9-4378-9f3d-e047f7e06a57"
+            },
+            "73526a97-db80-4ba1-9dff-0811392475f7": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2.316455696202536
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2.3481012658227893
+                    }
+                ],
+                "timestamp": 1689235357352,
+                "hash": "73526a97-db80-4ba1-9dff-0811392475f7"
+            },
+            "2d3cb970-5272-41be-b951-8276e5df28c8": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/y",
+                        "value": 1.8101265822784816
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/y",
+                        "value": 1.8417721518987347
+                    }
+                ],
+                "timestamp": 1689235366037,
+                "hash": "2d3cb970-5272-41be-b951-8276e5df28c8"
+            },
+            "3876e17c-573f-4b3c-8730-a9e105ed1eb6": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 4.146582278481012
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 4.114936708860759
+                    }
+                ],
+                "timestamp": 1689235378303,
+                "hash": "3876e17c-573f-4b3c-8730-a9e105ed1eb6"
+            },
+            "9323dd14-e11f-4cdf-8def-2bd330fdc10c": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689235390787,
+                "hash": "9323dd14-e11f-4cdf-8def-2bd330fdc10c"
+            },
+            "0fa7d593-e27b-4b1a-92b1-5121a45e3c66": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 73.72151898734177
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 66.12658227848101
+                    }
+                ],
+                "timestamp": 1689235394995,
+                "hash": "0fa7d593-e27b-4b1a-92b1-5121a45e3c66"
+            },
+            "9d435307-5cdd-4eaa-b031-ccb4523f215f": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraLookAt/y",
+                        "value": -45.57187360925679
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraLookAt/y",
+                        "value": -60.76249814567573
+                    }
+                ],
+                "timestamp": 1689235401070,
+                "hash": "9d435307-5cdd-4eaa-b031-ccb4523f215f"
+            },
+            "0ee3fcb1-9d9f-4cb6-a60a-75ee75c9e2d3": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689235444653,
+                "hash": "0ee3fcb1-9d9f-4cb6-a60a-75ee75c9e2d3"
+            },
+            "82168af1-c1fb-4bb8-afa8-bcf7929c259d": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 58.53164556962025
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 87.64556962025316
+                    }
+                ],
+                "timestamp": 1689235449161,
+                "hash": "82168af1-c1fb-4bb8-afa8-bcf7929c259d"
+            },
+            "ea312924-9bfd-424a-8bae-aa604cf7d41c": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2.4430379746835493
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/x",
+                        "value": 2.316455696202536
+                    }
+                ],
+                "timestamp": 1689235456486,
+                "hash": "ea312924-9bfd-424a-8bae-aa604cf7d41c"
+            },
+            "0efc9643-500e-4552-8e6f-e9cecd4bc11b": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 4.051645569620252
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/ref2Rotation/z",
+                        "value": 4.146582278481012
+                    }
+                ],
+                "timestamp": 1689235461776,
+                "hash": "0efc9643-500e-4552-8e6f-e9cecd4bc11b"
+            },
+            "47702c09-30a5-4824-a37b-6095b139e739": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 63.59493670886076
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 58.53164556962025
+                    }
+                ],
+                "timestamp": 1689235467161,
+                "hash": "47702c09-30a5-4824-a37b-6095b139e739"
+            },
+            "f8b63b85-e24c-480e-adaa-5b9daea4ee2c": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689235487819,
+                "hash": "f8b63b85-e24c-480e-adaa-5b9daea4ee2c"
+            },
+            "af0e78aa-980d-40ed-807b-c63151805f3a": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689235520003,
+                "hash": "af0e78aa-980d-40ed-807b-c63151805f3a"
+            },
+            "774783fa-13b1-41a2-a2ab-9eed4a6df2dd": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689235520376,
+                "hash": "774783fa-13b1-41a2-a2ab-9eed4a6df2dd"
+            },
+            "d801638c-b8e9-4b01-80d0-99d249402a26": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 81.31645569620252
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 73.72151898734177
+                    }
+                ],
+                "timestamp": 1689235522395,
+                "hash": "d801638c-b8e9-4b01-80d0-99d249402a26"
+            },
+            "f3a4d9d4-663e-4ed9-a10c-cf642f7649c3": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689235525025,
+                "hash": "f3a4d9d4-663e-4ed9-a10c-cf642f7649c3"
+            },
+            "7037ef2a-57f4-4871-af0b-fc42da6164e1": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 71.18987341772151
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 63.59493670886076
+                    }
+                ],
+                "timestamp": 1689235527250,
+                "hash": "7037ef2a-57f4-4871-af0b-fc42da6164e1"
+            },
+            "cc5653bd-4f8f-4daa-832b-e9590d035772": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689235528725,
+                "hash": "cc5653bd-4f8f-4daa-832b-e9590d035772"
+            },
+            "d452d856-6b4a-4d8d-8e82-e52d2e7c86a2": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 88.91139240506328
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 81.31645569620252
+                    }
+                ],
+                "timestamp": 1689235557985,
+                "hash": "d452d856-6b4a-4d8d-8e82-e52d2e7c86a2"
+            },
+            "69482c3c-09e3-4e75-83fb-ae95fda10980": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/ref1Rotation/x",
+                        "value": 1.7329179646936657
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/ref1Rotation/x",
+                        "value": 1.6
+                    }
+                ],
+                "timestamp": 1689235571259,
+                "hash": "69482c3c-09e3-4e75-83fb-ae95fda10980"
+            },
+            "c61bf99d-f2e2-4e09-a992-e4db491d0cf7": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 59.79746835443038
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 88.91139240506328
+                    }
+                ],
+                "timestamp": 1689235578008,
+                "hash": "c61bf99d-f2e2-4e09-a992-e4db491d0cf7"
+            },
+            "e0d99bdb-854a-4ee8-8e07-b46c38d576dc": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/ref1Rotation/x",
+                        "value": 1.7
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/ref1Rotation/x",
+                        "value": 1.7329179646936657
+                    }
+                ],
+                "timestamp": 1689235596911,
+                "hash": "e0d99bdb-854a-4ee8-8e07-b46c38d576dc"
+            },
+            "191a3488-ffdf-4521-876f-35c47bb4a91a": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 73.72151898734177
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 59.79746835443038
+                    }
+                ],
+                "timestamp": 1689235603516,
+                "hash": "191a3488-ffdf-4521-876f-35c47bb4a91a"
+            },
+            "147a7809-074f-4dde-ac68-e922f206c089": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689236412340,
+                "hash": "147a7809-074f-4dde-ac68-e922f206c089"
+            },
+            "153e32a3-b3e9-46be-9ee7-f69b5dc4eb05": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 76.25316455696202
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 71.18987341772151
+                    }
+                ],
+                "timestamp": 1689236414696,
+                "hash": "153e32a3-b3e9-46be-9ee7-f69b5dc4eb05"
+            },
+            "06c6a626-b330-419c-8350-f246acd3c7e1": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689236416032,
+                "hash": "06c6a626-b330-419c-8350-f246acd3c7e1"
+            },
+            "829cae70-4857-46ba-be82-8bd4100f0a68": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/y",
+                        "value": 77
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/camerePosition/y",
+                        "value": 213.71562082777035
+                    }
+                ],
+                "timestamp": 1689236422509,
+                "hash": "829cae70-4857-46ba-be82-8bd4100f0a68"
+            },
+            "d45ef912-c327-45ca-ba45-0b581578f371": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 83.92405063291135
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 9.493670886075988
+                    }
+                ],
+                "timestamp": 1689236427538,
+                "hash": "d45ef912-c327-45ca-ba45-0b581578f371"
+            },
+            "c97ec048-610b-40a8-b3e7-3401f1723f5d": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 95.24050632911391
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/leser1Scale/z",
+                        "value": 73.72151898734177
+                    }
+                ],
+                "timestamp": 1689236665813,
+                "hash": "c97ec048-610b-40a8-b3e7-3401f1723f5d"
+            },
+            "ab23b384-1fb3-4438-9f4a-d1c0db457e97": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689236667101,
+                "hash": "ab23b384-1fb3-4438-9f4a-d1c0db457e97"
+            },
+            "83ed4a39-6ff8-4ff3-8607-d7b4c82db7e8": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 77.51898734177215
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector2/leser2Scale/z",
+                        "value": 76.25316455696202
+                    }
+                ],
+                "timestamp": 1689236669596,
+                "hash": "83ed4a39-6ff8-4ff3-8607-d7b4c82db7e8"
+            },
+            "990520ad-aa2c-41b7-81d8-8dbe50dec945": {
+                "forwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "add",
+                        "path": "/panels/outlinePanel/selection/0",
+                        "value": {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector2"
+                        }
+                    },
+                    {
+                        "op": "remove",
+                        "path": "/panels/outlinePanel/selection/1"
+                    }
+                ],
+                "timestamp": 1689236673086,
+                "hash": "990520ad-aa2c-41b7-81d8-8dbe50dec945"
+            },
+            "eef6437d-5938-4f39-9a03-7c8d62838063": {
+                "forwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 81.2658227848101
+                    }
+                ],
+                "backwardDiff": [
+                    {
+                        "op": "replace",
+                        "path": "/coreByProject/THREE.js x Theatre.js/sheetsById/Animated scene/staticOverrides/byObject/Reflector1/cameraFov/x",
+                        "value": 83.92405063291135
+                    }
+                ],
+                "timestamp": 1689236679337,
+                "hash": "eef6437d-5938-4f39-9a03-7c8d62838063"
+            }
+        },
+        "listOfCommitHashes": [
+            "143183b6-1746-401b-a32f-09125c70e6f4",
+            "3a622e56-477c-4952-9cb0-14de5faa7729",
+            "5e02ced7-7fbe-4476-a855-5568a6265a2e",
+            "ef1bef52-ae56-4394-a913-825d193e7212",
+            "b7ee4d45-bb3c-49b3-aed1-73b2e0e4c890",
+            "423d269d-7cb9-4920-b664-867bac39ccc3",
+            "5ddd500d-06db-40a2-9d64-86361282d8fa",
+            "bfd3c9e1-f144-46c5-aedb-a41319c141b5",
+            "9d89b98a-955f-4855-93fd-b8eaae68eff6",
+            "6b501c5f-dfde-461f-991f-f2ae96d867e8",
+            "8bd52526-c9ca-48a8-a2b3-a9cb589f3bba",
+            "1e20ec6a-56ca-4c64-8bd9-9b4032f12c7c",
+            "1bd087c1-c6ed-4df6-b1a2-d180c29f86df",
+            "20922f28-e69c-4c08-9058-cf1c457deb9b",
+            "9083c626-03af-4133-96f8-9603b8b92b96",
+            "d47fa66e-09db-450d-9a9f-9fed7de31d6e",
+            "6fdb770c-4c39-4d90-b72d-6eb7b827876c",
+            "538eab71-8ba2-473f-b2bc-f82e9fc7bf6c",
+            "5793bf13-7b44-48e1-b4da-b7f01ee75312",
+            "2f77263b-169f-45d7-9ca6-1bc6455e6c48",
+            "bffe2980-67e6-46c2-a2ed-943adf0c565f",
+            "76a3ded4-6463-4a99-a726-8d8373358d8a",
+            "cc9459bd-2121-48fd-bf65-82aa86751c87",
+            "f4a00027-5dff-4a62-ad10-bff96ba5ba64",
+            "57ac8f44-f243-4ea8-be7f-a494e4b09b7e",
+            "dfb045a7-661b-4b8c-b208-cab50aa43f3b",
+            "393d3917-70ab-41e3-af87-59ca6e5c2b52",
+            "a83fccc4-9246-48b6-9b40-b3b6883088d1",
+            "72297eb6-4642-4afe-be08-a447900580da",
+            "75b9b561-ed54-4f1d-9704-cd4ac7b2dec9",
+            "bd75b6de-5968-4e19-a7b7-47dd3d6646b8",
+            "f65a8d1e-058c-4210-8131-4cdef26ef1b9",
+            "5e21b015-c5f8-44b9-b5a5-4e1c89579b49",
+            "c4200126-7bb1-4eb8-bee9-6730d718904c",
+            "e6953140-7a91-40c2-bb10-04e41ec6e928",
+            "2ad62ded-f4e2-43c6-acc7-467247530d15",
+            "412e0b90-2079-4525-8ca2-3d554de643a2",
+            "c6658615-2151-4dc1-9b83-16d3e9384e14",
+            "c3271b35-04cf-4eeb-9e26-cd5e967f4797",
+            "b8f70673-519c-43f0-b30f-49e3ca8e1e65",
+            "e37dd7d2-7458-4abc-9b4f-c76de3ac158d",
+            "0a0ecb89-174e-4bfd-a32e-6722a786c1e7",
+            "a903d4aa-9690-450d-b66d-12dbdf9bc391",
+            "e43946ce-8e0a-4ba2-aff1-6fc9f14af8f8",
+            "4c5c6c42-a88e-4309-a184-170ebfc8abf4",
+            "c672dab5-8293-4238-a617-c9d53377f8f4",
+            "d851952d-6f25-4718-a8b3-49dcd7316953",
+            "bc2f22c6-c235-49e5-a31b-033d117fc641",
+            "26455c40-0914-4cfe-8296-a8472ee4b78a",
+            "2fea3956-45ae-435b-a9f5-bbe99016bf60",
+            "d888dcb9-6ab0-4fe6-8acd-0562b39640ce",
+            "78e95945-0224-44bc-8682-829100a456a1",
+            "c6223034-e508-4bb4-92c1-418db4ad1dcf",
+            "51fb3d66-c7d6-455b-be98-9508533a07dd",
+            "3f8fd2c6-8ae5-4e53-b380-1cfb3e65d1b0",
+            "2866177e-3c78-4c36-87f3-6921c933dccb",
+            "d6264029-1b0d-4024-b6ca-ec17db7a519b",
+            "11b7df35-38eb-4e96-a0d6-17826f8d101b",
+            "221b5b79-a76e-45b2-b78a-0a35e932d4f4",
+            "7f46719f-70cd-48a0-a12d-c542b37a00d3",
+            "e25c3b2b-5003-46b4-8e92-a58521383181",
+            "fd24979d-4b47-488c-b23b-532be2940463",
+            "dd80cc01-84b5-4e68-a645-58f3530d210c",
+            "88775bed-3a00-418f-9c48-37fff4e48154",
+            "bc3af112-7f7f-4007-91e7-1f3b8486bad3",
+            "60c69ef9-4975-420d-b180-bcfc7cb13e45",
+            "9a0c741c-70b9-4378-9f3d-e047f7e06a57",
+            "73526a97-db80-4ba1-9dff-0811392475f7",
+            "2d3cb970-5272-41be-b951-8276e5df28c8",
+            "3876e17c-573f-4b3c-8730-a9e105ed1eb6",
+            "9323dd14-e11f-4cdf-8def-2bd330fdc10c",
+            "0fa7d593-e27b-4b1a-92b1-5121a45e3c66",
+            "9d435307-5cdd-4eaa-b031-ccb4523f215f",
+            "0ee3fcb1-9d9f-4cb6-a60a-75ee75c9e2d3",
+            "82168af1-c1fb-4bb8-afa8-bcf7929c259d",
+            "ea312924-9bfd-424a-8bae-aa604cf7d41c",
+            "0efc9643-500e-4552-8e6f-e9cecd4bc11b",
+            "47702c09-30a5-4824-a37b-6095b139e739",
+            "f8b63b85-e24c-480e-adaa-5b9daea4ee2c",
+            "af0e78aa-980d-40ed-807b-c63151805f3a",
+            "774783fa-13b1-41a2-a2ab-9eed4a6df2dd",
+            "d801638c-b8e9-4b01-80d0-99d249402a26",
+            "f3a4d9d4-663e-4ed9-a10c-cf642f7649c3",
+            "7037ef2a-57f4-4871-af0b-fc42da6164e1",
+            "cc5653bd-4f8f-4daa-832b-e9590d035772",
+            "d452d856-6b4a-4d8d-8e82-e52d2e7c86a2",
+            "69482c3c-09e3-4e75-83fb-ae95fda10980",
+            "c61bf99d-f2e2-4e09-a992-e4db491d0cf7",
+            "e0d99bdb-854a-4ee8-8e07-b46c38d576dc",
+            "191a3488-ffdf-4521-876f-35c47bb4a91a",
+            "147a7809-074f-4dde-ac68-e922f206c089",
+            "153e32a3-b3e9-46be-9ee7-f69b5dc4eb05",
+            "06c6a626-b330-419c-8350-f246acd3c7e1",
+            "829cae70-4857-46ba-be82-8bd4100f0a68",
+            "d45ef912-c327-45ca-ba45-0b581578f371",
+            "c97ec048-610b-40a8-b3e7-3401f1723f5d",
+            "ab23b384-1fb3-4438-9f4a-d1c0db457e97",
+            "83ed4a39-6ff8-4ff3-8607-d7b4c82db7e8",
+            "990520ad-aa2c-41b7-81d8-8dbe50dec945",
+            "eef6437d-5938-4f39-9a03-7c8d62838063"
+        ],
+        "innerState": {
+            "projects": {
+                "stateByProjectId": {
+                    "THREE.js x Theatre.js": {
+                        "stateBySheetId": {
+                            "Animated scene": {
+                                "selectedInstanceId": "default",
+                                "sequenceEditor": {
+                                    "selectedPropsByObject": {}
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "autoKey": true,
+            "coreByProject": {
+                "THREE.js x Theatre.js": {
+                    "sheetsById": {
+                        "Animated scene": {
+                            "staticOverrides": {
+                                "byObject": {
+                                    "Reflector1": {
+                                        "leser1Scale": {
+                                            "z": 95.24050632911391
+                                        },
+                                        "camerePosition": {
+                                            "x": 8,
+                                            "y": 77,
+                                            "z": 100.00000000000001
+                                        },
+                                        "ref1Position": {
+                                            "x": 19,
+                                            "y": -30,
+                                            "z": -36
+                                        },
+                                        "leser1Position": {
+                                            "x": 100,
+                                            "y": -30,
+                                            "z": -36
+                                        },
+                                        "ref1Rotation": {
+                                            "x": 1.7,
+                                            "y": 6.456
+                                        },
+                                        "ref1Scale": {
+                                            "x": 0.15,
+                                            "y": 0.01,
+                                            "z": 0.01
+                                        },
+                                        "leser1Intersect": {
+                                            "x": -90
+                                        },
+                                        "cameraFov": {
+                                            "x": 81.2658227848101
+                                        },
+                                        "cameraLookAt": {
+                                            "x": -22.785936804628392,
+                                            "y": -45.57187360925679
+                                        }
+                                    },
+                                    "Reflector2": {
+                                        "ref2Position": {
+                                            "x": 18.797656134104734,
+                                            "y": -52,
+                                            "z": -23
+                                        },
+                                        "ref2Rotation": {
+                                            "x": 2.4430379746835493,
+                                            "y": 1.8101265822784816,
+                                            "z": 4.051645569620252
+                                        },
+                                        "ref2Scale": {
+                                            "x": 0.012609405132768203,
+                                            "y": 0.01,
+                                            "z": 0.1
+                                        },
+                                        "leser2Position": {
+                                            "x": 100,
+                                            "y": -52,
+                                            "z": -23
+                                        },
+                                        "leser2Intersect": {
+                                            "x": -90
+                                        },
+                                        "leser2Scale": {
+                                            "z": 77.51898734177215
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "definitionVersion": "0.4.0",
+                    "revisionHistory": []
+                }
+            },
+            "panelInstanceDesceriptors": {},
+            "panels": {
+                "outlinePanel": {
+                    "selection": [
+                        {
+                            "type": "SheetObject",
+                            "projectId": "THREE.js x Theatre.js",
+                            "sheetId": "Animated scene",
+                            "objectKey": "Reflector1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "ahistoric": {
+        "visibilityState": "everythingIsVisible",
+        "theTrigger": {
+            "position": {
+                "closestCorner": "bottomLeft",
+                "distanceFromHorizontalEdge": 0.02,
+                "distanceFromVerticalEdge": 0.02
+            }
+        },
+        "coreByProject": {
+            "THREE.js x Theatre.js": {
+                "ahistoricStuff": ""
+            }
+        },
+        "projects": {
+            "stateByProjectId": {}
+        },
+        "updateChecker": {
+            "lastChecked": 1689234904494,
+            "result": {
+                "hasUpdates": false
+            }
+        }
+    }
+}

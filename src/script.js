@@ -2,11 +2,11 @@ import * as THREE from 'three'
 console.log("pkp:  ~ file: script.js:2 ~ THREE:", THREE)
 import $ from "jquery";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import studio from '@theatre/studio'
+//import studio from '@theatre/studio'
 import { getProject, types } from '@theatre/core';
-import projectState from '../public/assets/jsons/controls3.json';
+import normalVision from '../public/assets/jsons/animationControls2.json';
+import myopicVision from '../public/assets/jsons/myopicVision.json';
 
-console.log("projectState--->", projectState)
 const loader = new GLTFLoader();
 var scene, camera, renderer, container;
 var Ambient, sunLight;
@@ -23,14 +23,20 @@ container = document.getElementById('canvas-div');
 
 
 // theatre ....................................
-studio.initialize()
+//studio.initialize()
 
-//const project = getProject('THREE.js x Theatre.js',{ state: projectState })
-const project = getProject('THREE.js x Theatre.js')
-const sheet = project.sheet('Animated scene')
+ var project;
+var sheet;
 
+ 
+ function initProjet(){
+   project = getProject('THREE.js x Theatre.js',{ state: normalVision })
+    //    project = getProject('THREE.js x Theatre.js')
+     sheet = project.sheet('Animated scene')
+     project.ready.then(() => sheet.sequence.play({ iterationCount: 1 }))
+ }
 
-
+ initProjet();
 //scene
 scene = new THREE.Scene();
 camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 200000);
@@ -341,7 +347,7 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
-//project.ready.then(() => sheet.sequence.play({ iterationCount: Infinity }))
+
 
 
 
@@ -705,4 +711,14 @@ function loadGLTF() {
 }
 loadGLTF();
 
+export const  thAnimPause =()=>{
+    console.warn(sheet.sequence.pointer.playing)
+    sheet.sequence.pause()
+}
+window.thAnimPause=thAnimPause;
 
+
+export const thAnimPlay=()=>{
+    sheet.sequence.play()
+}
+window.thAnimPlay=thAnimPlay;

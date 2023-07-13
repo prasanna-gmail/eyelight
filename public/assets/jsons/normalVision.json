@@ -1,0 +1,166 @@
+{
+  "sheetsById": {
+    "Animated scene": {
+      "staticOverrides": {
+        "byObject": {
+          "Reflector1": {
+            "leser1Scale": {
+              "z": 56
+            },
+            "camerePosition": {
+              "x": 8,
+              "y": 77,
+              "z": 100.00000000000001
+            },
+            "ref1Position": {
+              "x": 19,
+              "y": -30,
+              "z": -36
+            },
+            "leser1Position": {
+              "x": 100,
+              "y": -30,
+              "z": -36
+            },
+            "ref1Rotation": {
+              "x": 1.7,
+              "y": 6.456
+            },
+            "ref1Scale": {
+              "x": 0.15,
+              "y": 0.01,
+              "z": 0.01
+            },
+            "leser1Intersect": {
+              "x": -90
+            },
+            "cameraFov": {
+              "x": 81.2658227848101
+            },
+            "cameraLookAt": {
+              "x": -22.785936804628392,
+              "y": -45.57187360925679
+            }
+          },
+          "Reflector2": {
+            "ref2Position": {
+              "x": 18.797656134104734,
+              "y": -52,
+              "z": -23
+            },
+            "ref2Rotation": {
+              "x": 2.4430379746835493,
+              "y": 1.8101265822784816,
+              "z": 4.051645569620252
+            },
+            "ref2Scale": {
+              "x": 0.012609405132768203,
+              "y": 0.01,
+              "z": 0.1
+            },
+            "leser2Position": {
+              "x": 100,
+              "y": -52,
+              "z": -23
+            },
+            "leser2Intersect": {
+              "x": -90
+            },
+            "leser2Scale": {
+              "z": 56
+            }
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 10,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Reflector1": {
+            "trackData": {
+              "3MDxtRiuGL": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Reflector1:[\"leser1Scale\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "sIVMP1sHuH",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "A4Uc4o44wv",
+                    "position": 5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 56
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"leser1Scale\",\"z\"]": "3MDxtRiuGL"
+            }
+          },
+          "Reflector2": {
+            "trackData": {
+              "ecT-8bUiv9": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Reflector2:[\"leser2Scale\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "owxdGHWdQJ",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "RkEmAZ7cq0",
+                    "position": 5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 56
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"leser2Scale\",\"z\"]": "ecT-8bUiv9"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "hXBxmqolqkJWUVpD"
+  ]
+}
