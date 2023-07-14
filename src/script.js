@@ -2,21 +2,27 @@ import * as THREE from 'three'
 console.log("pkp:  ~ file: script.js:2 ~ THREE:", THREE)
 import $ from "jquery";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import {GUI} from 'dat.gui'
 
 const loader = new GLTFLoader();
 var scene, camera, renderer, container;
 var Ambient, sunLight;
 var LaserBeam1;
-
+var globalVar={
+    startingPoint:10,
+    length:10,
+    angle:2,
+    thickness:4
+}
 container = document.getElementById('canvas-div');
 
 //scene
 scene = new THREE.Scene();
 camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 200000);
-camera.position.set(0, 10, 10);
+camera.position.set(0, 50, 50);
 camera.lookAt(0, 0, 0);
 scene.add(camera);
-
+const gui = new GUI();
 //Mouse evnet
 var mouse = {
     x: 0,
@@ -77,17 +83,26 @@ function add2Scene(obj) {
     }
 }
 
+const beamFolder = gui.addFolder("Beam")
+
+beamFolder.add(LaserBeam1.object3d.position,'x',-100,500).name("Baem X position")
+beamFolder.add(LaserBeam1.object3d.position,'y',-100,500).name("Baem Y position")
+beamFolder.add(LaserBeam1.object3d.position,'z',-100,500).name("Baem Z position")
+beamFolder.add(LaserBeam1.intersect,'x',-100,500).name("Baem X intersect")
+beamFolder.add(LaserBeam1.object3d.scale,'z',0,500).name("Beam Length")
+
 function animate() {
 
     requestAnimationFrame(animate);
 
     // LaserBeam1.object3d.position.set(4.5, 0, 7);
-    LaserBeam1.object3d.position.set(50, -90, -50);
+   // LaserBeam1.object3d.position.set(50, -90, -50);
     LaserBeam1.intersect(
         new THREE.Vector3(
             -9,
             10,
-            4 + Math.cos(Date.now() * 0.51 * Math.PI / 180) * 2),
+            // 4 + Math.cos(Date.now() * 0.51 * Math.PI / 180) * 2),
+            4),
         objectArray
     );
 
@@ -105,20 +120,29 @@ function animate() {
     camera.lookAt(scene.position);
 
     renderer.render(scene, camera);
+   // LaserBeam1.object3d.scale.z = globalVar.length;
 }
 animate();
 
+
+
+
+
+
+
+
+var config = {
+    length: globalVar.length,
+    reflectMax: 1
+};
 function LaserBeam(iconfig) {
 
-    var config = {
-        length: 100,
-        reflectMax: 1
-    };
+
     config = $.extend(config, iconfig);
 
     this.object3d = new THREE.Object3D();
     this.reflectObject = null;
-    this.pointLight = new THREE.PointLight(0xffffff, 1, 4);
+    this.pointLight = new THREE.PointLight(0xffffff, 1, 3);
     var raycaster = new THREE.Raycaster();
     var canvas = generateLaserBodyCanvas();
     var texture = new THREE.Texture(canvas);
@@ -133,7 +157,7 @@ function LaserBeam(iconfig) {
         depthWrite: false,
         transparent: true
     });
-    var geometry = new THREE.PlaneGeometry(1, 0.1 * 5);
+    var geometry = new THREE.PlaneGeometry(1, globalVar.thickness);
     geometry.rotateY(0.5 * Math.PI);
 
     //use planes to simulate laserbeam
@@ -198,7 +222,7 @@ function LaserBeam(iconfig) {
         }
         //non collision
         else {
-            this.object3d.scale.z = config.length;
+            // this.object3d.scale.z = config.length;
             this.pointLight.visible = false;
             this.object3d.lookAt(
                 this.object3d.position.x + direction.x,
@@ -247,34 +271,7 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
 let eyeScene = null;
-document.onkeydown = function (e) {
-    console.log("pkp:  ~ file: script.js:238 ~ e:", e)
-    switch (e.key) {
-        case "a":
-            eyeScene.rotation.y += 0.1;
-            break;
-        case "d":
-            eyeScene.rotation.y -= 0.1;
-            break;
-        case "w":
-            eyeScene.scale.x += 0.1;
-            eyeScene.scale.y += 0.1;
-            eyeScene.scale.z += 0.1;
-            break;
-        case "s":
-            eyeScene.scale.x -= 0.1;
-            eyeScene.scale.y -= 0.1;
-            eyeScene.scale.z -= 0.1;
-            break;
-        case "ArrowDown":
-            eyeScene.position.y -= 1;
-            break;
-        case "ArrowUp":
-            console.log("pkp:  ~ file: script.js:242 ~ up eyeScene:", eyeScene)
-            eyeScene.position.y += 1;
-            break;
-    }
-};
+
 
 // Load a glTF resource
 loader.load(
