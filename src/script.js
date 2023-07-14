@@ -82,7 +82,7 @@ function add2Scene(obj) {
         add2Scene(obj.reflectObject);
     }
 }
-
+var vector = new THREE.Vector3;
 const beamFolder = gui.addFolder("Beam")
 
 beamFolder.add(LaserBeam1.object3d.position,'x',-100,500).name("Baem X position")
