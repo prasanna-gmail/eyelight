@@ -10,9 +10,16 @@ var Ambient, sunLight;
 var LaserBeam1;
 var globalVar={
     startingPoint:10,
-    length:10,
+    beamLength:100,
     angle:2,
-    thickness:4
+    thickness:4,
+    intersectX:-90,
+    intersectY:10,
+    intersectZ:4,
+    beamPosX:50,
+    beamPosY:-30,
+    beamPosZ:-36,
+    fov:100,
 }
 container = document.getElementById('canvas-div');
 
@@ -54,24 +61,24 @@ scene.add(sunLight);
 //All object
 var Geometry, Material;
 var objectArray = [];
-for (var i = 0; i < 5; i++) {
-    Geometry = new THREE.BoxGeometry(1, 2, 4);
+
+    Geometry = new THREE.BoxGeometry(10, 20, 20);
     Material = new THREE.MeshPhongMaterial({
         color: 0x00ff00
     });
-    var Mash = new THREE.Mesh(Geometry, Material);
+    var reflector1 = new THREE.Mesh(Geometry, Material);
 
-    Mash.position.set(
-        (i % 2) * 5 - 2.5,
-        0,
-        i * -5
+    reflector1.position.set(
+        20,-30,-36
     );
-    objectArray.push(Mash);
-    scene.add(Mash);
-}
+    objectArray.push(reflector1);
+    scene.add(reflector1);
+
 var LaserBeam1 = new LaserBeam({
     reflectMax: 5
 });
+LaserBeam1.object3d.position.set(globalVar.beamPosX, globalVar.beamPosY, globalVar.beamPosZ);
+//LaserBeam1.object3d.scale.z = globalVar.beamLength;
 add2Scene(LaserBeam1);
 
 function add2Scene(obj) {
@@ -85,11 +92,64 @@ function add2Scene(obj) {
 var vector = new THREE.Vector3;
 const beamFolder = gui.addFolder("Beam")
 
-beamFolder.add(LaserBeam1.object3d.position,'x',-100,500).name("Baem X position")
-beamFolder.add(LaserBeam1.object3d.position,'y',-100,500).name("Baem Y position")
-beamFolder.add(LaserBeam1.object3d.position,'z',-100,500).name("Baem Z position")
-beamFolder.add(LaserBeam1.intersect,'x',-100,500).name("Baem X intersect")
-beamFolder.add(LaserBeam1.object3d.scale,'z',0,500).name("Beam Length")
+beamFolder.add(LaserBeam1.object3d.position,'x',-100,500).name("Position X").onChange(function(val){
+    globalVar.beamPosX = val;
+})
+beamFolder.add(LaserBeam1.object3d.position,'y',-100,500).name("Position Y").onChange(function(val){
+    globalVar.beamPosY = val;
+})
+beamFolder.add(LaserBeam1.object3d.position,'z',-100,500).name("Position Z").onChange(function(val){
+    globalVar.beamPosZ = val;
+})
+
+beamFolder.add(globalVar,'intersectX',-100,50).name("Intersect X").onChange(function(val){
+    globalVar.intersectX = val;
+})
+beamFolder.add(globalVar,'intersectY',-100,50).name("Intersect Y").onChange(function(val){
+    globalVar.intersectY = val;
+})
+beamFolder.add(globalVar,'intersectY',-100,50).name("Intersect Z").onChange(function(val){
+    globalVar.intersectZ= val;
+})
+beamFolder.add(LaserBeam1.object3d.scale,'z',0,500).name("Length").onChange(function(val){
+    globalVar.beamLength = val;
+    LaserBeam1.hiddenReflectObject();
+    
+})
+
+const CamFolder = gui.addFolder("Camera")
+CamFolder.add(camera.position,'x',-100,200).name("Position X");
+CamFolder.add(camera.position,'y',-100,200).name("Position Y");
+CamFolder.add(camera.position,'z',-100,200).name("Position Z");
+
+
+
+CamFolder.add(globalVar,"fov",0,190).name("FOV").onChange(function(val){
+    camera.fov = val;
+    camera.updateProjectionMatrix();
+})
+
+
+const reflectorFOlder = gui.addFolder("Reflector")
+reflectorFOlder.add(reflector1.position,'x',-100,200).name("Position X ");
+reflectorFOlder.add(reflector1.position,'y',-100,200).name("Position Y");
+reflectorFOlder.add(reflector1.position,'z',-100,200).name("Position Z");
+
+reflectorFOlder.add(reflector1.rotation,'x',-100,200).name("Rotation X");
+reflectorFOlder.add(reflector1.rotation,'y',-100,200).name("Rotation Y");
+reflectorFOlder.add(reflector1.rotation,'z',-100,200).name("Rotation Z");
+
+reflectorFOlder.add(reflector1.scale,'x',0,1).name("Scale X");
+reflectorFOlder.add(reflector1.scale,'y',0,1).name("Scale X");
+reflectorFOlder.add(reflector1.scale,'z',0,1).name("Scale X");
+
+LaserBeam1.intersect(
+    new THREE.Vector3(
+        globalVar.intersectX,
+        globalVar.intersectY,
+       globalVar.intersectZ),
+    objectArray
+);
 
 function animate() {
 
@@ -97,22 +157,16 @@ function animate() {
 
     // LaserBeam1.object3d.position.set(4.5, 0, 7);
    // LaserBeam1.object3d.position.set(50, -90, -50);
-    LaserBeam1.intersect(
-        new THREE.Vector3(
-            -9,
-            10,
-            // 4 + Math.cos(Date.now() * 0.51 * Math.PI / 180) * 2),
-            4),
-        objectArray
-    );
-
     // LaserBeam1.intersect(
     //     new THREE.Vector3(
-    //         -10,
+    //         -9,
     //         10,
-    //         4 + Math.cos(Date.now() * 0.51 * Math.PI / 180) * 2),
+    //         // 4 + Math.cos(Date.now() * 0.51 * Math.PI / 180) * 2),
+    //         4),
     //     objectArray
     // );
+
+   
 
 
     // camera.position.x += (mouse.x * 30 - camera.position.x) * 0.05
@@ -120,7 +174,7 @@ function animate() {
     camera.lookAt(scene.position);
 
     renderer.render(scene, camera);
-   // LaserBeam1.object3d.scale.z = globalVar.length;
+   //LaserBeam1.object3d.scale.z = globalVar.length;
 }
 animate();
 
@@ -131,12 +185,12 @@ animate();
 
 
 
-var config = {
-    length: globalVar.length,
-    reflectMax: 1
-};
-function LaserBeam(iconfig) {
 
+function LaserBeam(iconfig) {
+    var config = {
+        length: globalVar.length,
+        reflectMax: 1
+    };
 
     config = $.extend(config, iconfig);
 
@@ -186,7 +240,9 @@ function LaserBeam(iconfig) {
         intersectArray = raycaster.intersectObjects(objectArray, true);
 
         //have collision
+       
         if (intersectArray.length > 0) {
+           
             this.object3d.scale.z = intersectArray[0].distance;
             this.object3d.lookAt(intersectArray[0].point.clone());
             this.pointLight.visible = true;
@@ -222,7 +278,7 @@ function LaserBeam(iconfig) {
         }
         //non collision
         else {
-            // this.object3d.scale.z = config.length;
+             this.object3d.scale.z = config.length;    //Laser-beam length
             this.pointLight.visible = false;
             this.object3d.lookAt(
                 this.object3d.position.x + direction.x,
