@@ -2,18 +2,22 @@ import * as THREE from 'three'
 console.log("pkp:  ~ file: script.js:2 ~ THREE:", THREE)
 import $ from "jquery";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import {GUI} from 'dat.gui';
 
 const loader = new GLTFLoader();
 var scene, camera, renderer, container;
 var Ambient, sunLight;
 var LaserBeam1;
-
+var globalVar = {
+    fov:110,
+    laserLength : 20
+}
 container = document.getElementById('canvas-div');
 
 //scene
 scene = new THREE.Scene();
 camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 200000);
-camera.position.set(0, 10, 10);
+camera.position.set(8, 77, 100);
 camera.lookAt(0, 0, 0);
 scene.add(camera);
 
@@ -48,23 +52,33 @@ scene.add(sunLight);
 //All object
 var Geometry, Material;
 var objectArray = [];
-for (var i = 0; i < 5; i++) {
-    Geometry = new THREE.BoxGeometry(1, 2, 4);
+//for (var i = 0; i < 5; i++) {
+    Geometry = new THREE.BoxGeometry(3, 3, 3);
     Material = new THREE.MeshPhongMaterial({
         color: 0x00ff00
     });
-    var Mash = new THREE.Mesh(Geometry, Material);
+    // var Mash = new THREE.Mesh(Geometry, Material);
+    // Mash.position.set(
+    //     (i % 2) * 5 - 2.5,
+    //     0,
+    //     i * -5
+    // );
 
-    Mash.position.set(
-        (i % 2) * 5 - 2.5,
-        0,
-        i * -5
-    );
-    objectArray.push(Mash);
-    scene.add(Mash);
-}
+    var reflector1 = new THREE.Mesh(Geometry, Material);
+
+    reflector1.position.set(1,1,1 );
+    objectArray.push(reflector1);
+    scene.add(reflector1);
+
+    var reflector2 = new THREE.Mesh(Geometry, Material);
+
+    reflector2.position.set(1,-11,1 );
+    objectArray.push(reflector2);
+    scene.add(reflector2);
+// }
 var LaserBeam1 = new LaserBeam({
-    reflectMax: 5
+    reflectMax: 5,
+    laserLength:globalVar.laserLength
 });
 add2Scene(LaserBeam1);
 
@@ -77,17 +91,69 @@ function add2Scene(obj) {
     }
 }
 
+// **************************************************DAT GUI *******************************************************************//
+
+
+/// camera control:-
+const gui = new GUI();
+const CamFolder = gui.addFolder("Camera");
+CamFolder.add(camera.position, 'x', -100, 200).name("Position X");
+CamFolder.add(camera.position, 'y', -100, 200).name("Position Y");
+CamFolder.add(camera.position, 'z', -100, 200).name("Position Z");
+
+CamFolder.add(globalVar, "fov", 0, 190).name("FOV").onChange(function (val) {
+    camera.fov = val;
+    camera.updateProjectionMatrix();
+})
+
+// Beam Control:
+const beamFolder = gui.addFolder("Beam");
+beamFolder.add(LaserBeam1.object3d.position,'x',-100, 500).name("Position X");
+beamFolder.add(LaserBeam1.object3d.position,'y',-100, 500).name("Position Y");
+beamFolder.add(LaserBeam1.object3d.position,'z',-100, 500).name("Position Z");
+
+ beamFolder.add(LaserBeam1.object3d.scale,'z',0, 100).name("Beam Length").onChange(function(val){
+    LaserBeam1 = new LaserBeam({
+        reflectMax:5,
+        laserLength :val
+    })
+  //  LaserBeam1.hiddenReflectObject()
+});;
+
+
+
+// reflector1 Control :- 
+const reflectorFolder1 = gui.addFolder("Reflector1");
+reflectorFolder1.add(reflector1.position, 'x', -100, 200).name("Position X ");
+reflectorFolder1.add(reflector1.position, 'y', -100, 200).name("Position Y");
+reflectorFolder1.add(reflector1.position, 'z', -100, 200).name("Position Z");
+reflectorFolder1.add(reflector1.rotation, 'x', -100, 200).name("Rotation X");
+reflectorFolder1.add(reflector1.rotation, 'x', -100, 200).name("Rotation Y");
+reflectorFolder1.add(reflector1.rotation, 'x', -100, 200).name("Rotation Z");
+
+const reflectorFolder2 = gui.addFolder("Reflector2");
+reflectorFolder2.add(reflector2.position, 'x', -100, 200).name("Position X ");
+reflectorFolder2.add(reflector2.position, 'y', -100, 200).name("Position Y");
+reflectorFolder2.add(reflector2.position, 'z', -100, 200).name("Position Z");
+reflectorFolder2.add(reflector2.rotation, 'x', -100, 200).name("Rotation X");
+reflectorFolder2.add(reflector2.rotation, 'x', -100, 200).name("Rotation Y");
+reflectorFolder2.add(reflector2.rotation, 'x', -100, 200).name("Rotation Z");
+
+// **************************************************DAT GUI *******************************************************************//
+
+
 function animate() {
 
     requestAnimationFrame(animate);
 
     // LaserBeam1.object3d.position.set(4.5, 0, 7);
-    LaserBeam1.object3d.position.set(50, -90, -50);
+   // LaserBeam1.object3d.position.set(50, -90, -50);
     LaserBeam1.intersect(
         new THREE.Vector3(
             -9,
             10,
-            4 + Math.cos(Date.now() * 0.51 * Math.PI / 180) * 2),
+            // 4 + Math.cos(Date.now() * 0.51 * Math.PI / 180) * 2),
+            5),
         objectArray
     );
 
@@ -111,7 +177,7 @@ animate();
 function LaserBeam(iconfig) {
 
     var config = {
-        length: 100,
+        length: iconfig.laserLength,
         reflectMax: 1
     };
     config = $.extend(config, iconfig);
