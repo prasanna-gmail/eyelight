@@ -156,23 +156,26 @@ function initGUI(localLaserBeam, callee) {
 
 // initLaserBeam()
 
-function initLaserBeam(localLaserBeam,callee, posX, posY, posZ) {
+function initLaserBeam(localLaserBeam,callee, posX, posY, posZ,laserLength) {
     console.log("::,callee:: ",callee, posX,posY,posZ)
      localLaserBeam = new LaserBeam({
         reflectMax: 5,
+        laserLength:laserLength
     });
 
     // localLaserBeam = new LaserBeam(globalVar.myConfig);
     
     //localLaserBeam.object3d.position.set(globalVar.beamPosX, globalVar.beamPosY, globalVar.beamPosZ);
+    // localLaserBeam.object3d.position.set(posX,posY,posZ);
     localLaserBeam.object3d.position.set(50,-30,-36);
     //localLaserBeam.object3d.scale.z = globalVar.beamLength;
-    localLaserBeam.object3d.scale.z = 50;
+    //localLaserBeam.object3d.scale.z = 50;
+    //localLaserBeam.object3d.scale.z = 200;
     add2Scene(localLaserBeam);
 
   
    // initGUI(localLaserBeam,"init Laset Beam");
-   laserBeamIntersect(localLaserBeam, "init laser beam", -90,0,0)
+   laserBeamIntersect(localLaserBeam, "init laser beam", -90,5,4)
 }
 
 function laserBeamIntersect(localLaserBeam, callee,intX,intY,intZ){
@@ -244,7 +247,7 @@ function animate() {
 
 function LaserBeam(iconfig) {
     var config = {
-        length: 60,
+        length: iconfig.laserLength,
         reflectMax: 5
     };
 
@@ -431,10 +434,23 @@ function loadGLTF(){
 // Load a glTF resource
 
 init3DView();
-// initReflector();
+ initReflector();
 //initReflector()
- initLaserBeam(globalVar.myLaserBeam,"from init1",2000,-30,36);
+initLaserBeam(globalVar.myLaserBeam,"from init1",50,-30,36,50);
 //  initGUI(globalVar.myLaserBeam)
 
 //initGUI(globalVar.myLaserBeam,calee)
+
+
+export const changeRange = (val) => {
+   const progress = document.querySelector('#positionX');
+  
+  progress.addEventListener('input', function() {
+    const valueX = this.value;
+   console.log("447---->value--->",valueX)
+  // initLaserBeam(globalVar.myLaserBeam,"from init1",valueX,-30,36);
+  })
+}
+window.changeRange = changeRange;
+
 animate()
