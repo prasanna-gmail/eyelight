@@ -7,11 +7,10 @@ import { GUI } from 'dat.gui'
 const loader = new GLTFLoader();
 var scene, camera, renderer, container;
 var Ambient, sunLight;
-// var LaserBeam1;
+var LaserBeam1;
 var reflector1;
 var objectArray = [];
 var globalVar = {
-    myLaserBeam: "",
     startingPoint: 10,
     beamLength: 100,
     angle: 2,
@@ -19,18 +18,17 @@ var globalVar = {
     intersectX: -90,
     intersectY: 50,
     intersectZ: 4,
-    beamPosX: 100,
+    beamPosX: 50,
     beamPosY: -30,
     beamPosZ: -36,
     fov: 100,
-    myConfig :{
-        reflectMax : 5,
-        laserLength:100
-    }
 }
 
-
-
+init3DView();
+initReflector();
+initLaserBeam();
+initGUI()
+console.log("globalVar.intersectX---->", globalVar.intersectX)
 function init3DView() {
     container = document.getElementById('canvas-div');
     scene = new THREE.Scene();
@@ -39,14 +37,18 @@ function init3DView() {
     camera.lookAt(0, 0, 0);
     scene.add(camera);
 
+    //renderer
     renderer = new THREE.WebGLRenderer({
         antialias: true
     });
-
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x222222);
     container.appendChild(renderer.domElement);
     window.addEventListener('resize', onWindowResize, false);
+
+    //AmbientLight
+    Ambient = new THREE.AmbientLight(0xffffff, 0.2);
+    scene.add(Ambient);
 
     //DirectionalLight
     sunLight = new THREE.DirectionalLight(0xffffff, 0.5);
@@ -59,60 +61,41 @@ function init3DView() {
 }
 //scene
 
-function initReflector() {
-    var Geometry, Material;
-   
 
-    Geometry = new THREE.BoxGeometry(10, 20, 20);
-    Material = new THREE.MeshPhongMaterial({
-        color: 0x00ff00
-    });
-     reflector1 = new THREE.Mesh(Geometry, Material);
 
-    reflector1.position.set(
-        20, -30, -36
-    );
-    objectArray.push(reflector1);
-    scene.add(reflector1);
-
-   
-}
-
-function initGUI(localLaserBeam, callee) {
-    console.log("initGUI callee :: ",callee,localLaserBeam)
+function initGUI() {
     const gui = new GUI();
     const beamFolder = gui.addFolder("Beam")
 
-    beamFolder.add(globalVar, 'beamPosX', -100, 500).name("Position X").onChange(function (val) {
+    beamFolder.add(LaserBeam1.object3d.position, 'x', -100, 500).name("Position X").onChange(function (val) {
         globalVar.beamPosX = val;
     })
-    beamFolder.add(globalVar, 'beamPosY', -100, 500).name("Position Y").onChange(function (val) {
+    beamFolder.add(LaserBeam1.object3d.position, 'y', -100, 500).name("Position Y").onChange(function (val) {
         globalVar.beamPosY = val;
     })
-    beamFolder.add(globalVar, 'beamPosZ', -100, 500).name("Position Z").onChange(function (val) {
+    beamFolder.add(LaserBeam1.object3d.position, 'z', -100, 500).name("Position Z").onChange(function (val) {
         globalVar.beamPosZ = val;
     })
 
     beamFolder.add(globalVar, 'intersectX', -100, 50).name("Intersect X").onChange(function (val) {
         globalVar.intersectX = val;
-        laserBeamIntersect(localLaserBeam,"Intersect X");
-        
+        laserBeamIntersect();
+
     })
     beamFolder.add(globalVar, 'intersectY', -100, 50).name("Intersect Y").onChange(function (val) {
         globalVar.intersectY = val;
-        laserBeamIntersect(localLaserBeam,"Intersect Y");
+        laserBeamIntersect();
     })
     beamFolder.add(globalVar, 'intersectY', -100, 50).name("Intersect Z").onChange(function (val) {
         globalVar.intersectZ = val;
-        laserBeamIntersect(localLaserBeam,"Intersect Z");
+        laserBeamIntersect();
     })
-    beamFolder.add(globalVar.myConfig, 'laserLength', 0, 500).name("Length").onChange(function (val) {
-       // globalVar.myConfig.laserLength = val;
-       
-      // initLaserBeam(globalVar.myLaserBeam,"New Laser Beam Created on Length change.");
-        globalVar.myLaserBeam.hiddenReflectObject()
-        
-        
+    beamFolder.add(LaserBeam1.object3d.scale, 'z', 0, 500).name("Length").onChange(function (val) {
+        globalVar.beamLength = val;
+        LaserBeam1.hiddenReflectObject();
+
+        initLaserBeam();
+
 
     })
 
@@ -134,65 +117,68 @@ function initGUI(localLaserBeam, callee) {
     reflectorFOlder.add(reflector1.position, 'y', -100, 200).name("Position Y");
     reflectorFOlder.add(reflector1.position, 'z', -100, 200).name("Position Z");
 
-    reflectorFOlder.add(reflector1.rotation, 'x', -100, 200).name("Rotation X").onChange(function(){
+    reflectorFOlder.add(reflector1.rotation, 'x', -100, 200).name("Rotation X").onChange(function () {
+        initLaserBeam()
     });
-    reflectorFOlder.add(reflector1.rotation, 'y', -100, 200).name("Rotation Y").onChange(function(){
+    reflectorFOlder.add(reflector1.rotation, 'y', -100, 200).name("Rotation Y").onChange(function () {
+        initLaserBeam()
     });
-    reflectorFOlder.add(reflector1.rotation, 'z', -100, 200).name("Rotation Z").onChange(function(){
-    });
-
-    reflectorFOlder.add(reflector1.scale, 'x', 0, 1).name("Scale X").onChange(function(){
-    });
-    reflectorFOlder.add(reflector1.scale, 'y', 0, 1).name("Scale Y").onChange(function(){
-    });
-    reflectorFOlder.add(reflector1.scale, 'z', 0, 1).name("Scale Z").onChange(function(){
+    reflectorFOlder.add(reflector1.rotation, 'z', -100, 200).name("Rotation Z").onChange(function () {
+        initLaserBeam()
     });
 
-   
+    reflectorFOlder.add(reflector1.scale, 'x', 0, 1).name("Scale X").onChange(function () {
+        initLaserBeam()
+    });
+    reflectorFOlder.add(reflector1.scale, 'y', 0, 1).name("Scale Y").onChange(function () {
+        initLaserBeam()
+    });
+    reflectorFOlder.add(reflector1.scale, 'z', 0, 1).name("Scale Z").onChange(function () {
+        initLaserBeam()
+    });
+
+
 }
 
 
 
+function initReflector() {
+    var Geometry, Material;
 
+
+    Geometry = new THREE.BoxGeometry(10, 20, 20);
+    Material = new THREE.MeshPhongMaterial({
+        color: 0x00ff00
+    });
+    reflector1 = new THREE.Mesh(Geometry, Material);
+
+    reflector1.position.set(
+        20, -30, -36
+    );
+    objectArray.push(reflector1);
+    scene.add(reflector1);
+}
 // initLaserBeam()
 
-function initLaserBeam(localLaserBeam,callee, posX, posY, posZ,laserLength) {
-    console.log("::,callee:: ",callee, posX,posY,posZ)
-     localLaserBeam = new LaserBeam({
-        reflectMax: 5,
-        laserLength:laserLength
+function initLaserBeam() {
+    LaserBeam1 = new LaserBeam({
+        reflectMax: 5
     });
 
-    // localLaserBeam = new LaserBeam(globalVar.myConfig);
-    
-    //localLaserBeam.object3d.position.set(globalVar.beamPosX, globalVar.beamPosY, globalVar.beamPosZ);
-    // localLaserBeam.object3d.position.set(posX,posY,posZ);
-    localLaserBeam.object3d.position.set(50,-30,-36);
-    //localLaserBeam.object3d.scale.z = globalVar.beamLength;
-    //localLaserBeam.object3d.scale.z = 50;
-    //localLaserBeam.object3d.scale.z = 200;
-    add2Scene(localLaserBeam);
+    LaserBeam1.object3d.position.set(globalVar.beamPosX, globalVar.beamPosY, globalVar.beamPosZ);
+    //LaserBeam1.object3d.scale.z = globalVar.beamLength;
+    add2Scene(LaserBeam1);
 
-  
-   // initGUI(localLaserBeam,"init Laset Beam");
-   laserBeamIntersect(localLaserBeam, "init laser beam", -90,5,4)
+
+
 }
 
-function laserBeamIntersect(localLaserBeam, callee,intX,intY,intZ){
-    console.log("laserbeam Intersect--->",callee)
-    // localLaserBeam.intersect(
-    //     new THREE.Vector3(
-    //         globalVar.intersectX,
-    //         globalVar.intersectY,
-    //         globalVar.intersectZ),
-    //     objectArray
-    // );
-
-    localLaserBeam.intersect(
+function laserBeamIntersect() {
+    LaserBeam1.intersect(
         new THREE.Vector3(
-            intX,
-            intY,
-            intZ),
+            globalVar.intersectX,
+            globalVar.intersectY,
+            globalVar.intersectZ),
         objectArray
     );
 }
@@ -208,7 +194,7 @@ function add2Scene(obj) {
     }
 }
 
-
+animate()
 
 function animate() {
 
@@ -235,7 +221,7 @@ function animate() {
     renderer.render(scene, camera);
     //LaserBeam1.object3d.scale.z = globalVar.length;
 }
-//animate();
+animate();
 
 
 
@@ -247,8 +233,8 @@ function animate() {
 
 function LaserBeam(iconfig) {
     var config = {
-        length: iconfig.laserLength,
-        reflectMax: 5
+        length: 60,
+        reflectMax: 1
     };
 
     config = $.extend(config, iconfig);
@@ -387,69 +373,62 @@ function onWindowResize() {
 }
 let eyeScene = null;
 loadGLTF()
-function loadGLTF(){
+function loadGLTF() {
     loader.load(
         // resource URL
         'assets/humaneye.glb',
         // called when the resource is loaded
         function (gltf) {
-    
-    
+
+
             eyeScene = gltf.scene;
             console.log("pkp:  ~ file: script.js:258 ~ eyeScene:", eyeScene)
             eyeScene.position.set(-110, -100, -40);
-    
+
             eyeScene.rotation.set(1.8, 4.8, 8.58);
-    
+
             eyeScene.scale.x = 0.26;
             eyeScene.scale.y = 0.26;
             eyeScene.scale.z = 0.26;
-    
-    
-    
-    
+
+
+
+
             scene.add(gltf.scene);
-    
+
             gltf.animations; // Array<THREE.AnimationClip>
             gltf.scene; // THREE.Group
             gltf.scenes; // Array<THREE.Group>
             gltf.cameras; // Array<THREE.Camera>
             gltf.asset; // Object
-    
+
         },
         // called while loading is progressing
         function (xhr) {
-    
+
             console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-    
+
         },
         // called when loading has errors
         function (error) {
-    
+
             console.log('An error happened');
-    
+
         }
     );
 }
 // Load a glTF resource
 
-init3DView();
- initReflector();
-//initReflector()
-initLaserBeam(globalVar.myLaserBeam,"from init1",50,-30,36,50);
-//  initGUI(globalVar.myLaserBeam)
-
-//initGUI(globalVar.myLaserBeam,calee)
 
 
 export const changeRange = (val) => {
-   const progress = document.querySelector('#positionX');
-  
-  progress.addEventListener('input', function() {
-    const valueX = this.value;
-   console.log("447---->value--->",valueX)
-  // initLaserBeam(globalVar.myLaserBeam,"from init1",valueX,-30,36);
-  })
+    const progress = document.querySelector('#positionX');
+
+    progress.addEventListener('input', function () {
+        const valueX = this.value;
+        console.log("447---->value--->", valueX)
+        // initLaserBeam(globalVar.myLaserBeam,"from init1",valueX,-30,36);
+    })
 }
 window.changeRange = changeRange;
 
