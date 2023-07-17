@@ -13,7 +13,18 @@
 
   </script>
   <div id="canvas-div"></div>
+  <div class="slider">
+    <input type="range" id="positionX" name="positionX" value="" min="-100" max="500" onchange="changeRange(this.value())"/>
+  </div>
   <script type="module" src="src/script.js"></script>
+  <script>
+  const progress = document.querySelector('#positionX');
+  
+  progress.addEventListener('input', function() {
+    const value = this.value;
+   console.log("value--->",value)
+  })
+  </script>
 </body>
 
 </html>

@@ -19,7 +19,7 @@ var globalVar = {
     intersectX: -90,
     intersectY: 50,
     intersectZ: 4,
-    beamPosX: 50,
+    beamPosX: 100,
     beamPosY: -30,
     beamPosZ: -36,
     fov: 100,
@@ -109,7 +109,7 @@ function initGUI(localLaserBeam, callee) {
     beamFolder.add(globalVar.myConfig, 'laserLength', 0, 500).name("Length").onChange(function (val) {
        // globalVar.myConfig.laserLength = val;
        
-       initLaserBeam(globalVar.myLaserBeam,"New Laser Beam Created on Length change.");
+      // initLaserBeam(globalVar.myLaserBeam,"New Laser Beam Created on Length change.");
         globalVar.myLaserBeam.hiddenReflectObject()
         
         
@@ -135,23 +135,17 @@ function initGUI(localLaserBeam, callee) {
     reflectorFOlder.add(reflector1.position, 'z', -100, 200).name("Position Z");
 
     reflectorFOlder.add(reflector1.rotation, 'x', -100, 200).name("Rotation X").onChange(function(){
-        initLaserBeam(globalVar.myLaserBeam,"Rotation X")
     });
     reflectorFOlder.add(reflector1.rotation, 'y', -100, 200).name("Rotation Y").onChange(function(){
-        initLaserBeam(globalVar.myLaserBeam,"Rotation Y")
     });
     reflectorFOlder.add(reflector1.rotation, 'z', -100, 200).name("Rotation Z").onChange(function(){
-       initLaserBeam(globalVar.myLaserBeam,"Rotation Z")
     });
 
     reflectorFOlder.add(reflector1.scale, 'x', 0, 1).name("Scale X").onChange(function(){
-       initLaserBeam(globalVar.myLaserBeam,"Scale X")
     });
     reflectorFOlder.add(reflector1.scale, 'y', 0, 1).name("Scale Y").onChange(function(){
-       initLaserBeam(globalVar.myLaserBeam,"Scale Y")
     });
     reflectorFOlder.add(reflector1.scale, 'z', 0, 1).name("Scale Z").onChange(function(){
-       initLaserBeam(globalVar.myLaserBeam,"Scale X")
     });
 
    
@@ -162,29 +156,40 @@ function initGUI(localLaserBeam, callee) {
 
 // initLaserBeam()
 
-function initLaserBeam(localLaserBeam,callee) {
-    console.log("::,callee:: ",callee)
-    //  localLaserBeam = new LaserBeam({
-    //     reflectMax: 5,
-    // });
+function initLaserBeam(localLaserBeam,callee, posX, posY, posZ) {
+    console.log("::,callee:: ",callee, posX,posY,posZ)
+     localLaserBeam = new LaserBeam({
+        reflectMax: 5,
+    });
 
-    localLaserBeam = new LaserBeam(globalVar.myConfig);
+    // localLaserBeam = new LaserBeam(globalVar.myConfig);
     
-    localLaserBeam.object3d.position.set(globalVar.beamPosX, globalVar.beamPosY, globalVar.beamPosZ);
+    //localLaserBeam.object3d.position.set(globalVar.beamPosX, globalVar.beamPosY, globalVar.beamPosZ);
+    localLaserBeam.object3d.position.set(50,-30,-36);
     //localLaserBeam.object3d.scale.z = globalVar.beamLength;
+    localLaserBeam.object3d.scale.z = 50;
     add2Scene(localLaserBeam);
 
   
-    initGUI(localLaserBeam,"init Laset Beam");
+   // initGUI(localLaserBeam,"init Laset Beam");
+   laserBeamIntersect(localLaserBeam, "init laser beam", -90,0,0)
 }
 
-function laserBeamIntersect(localLaserBeam, callee){
+function laserBeamIntersect(localLaserBeam, callee,intX,intY,intZ){
     console.log("laserbeam Intersect--->",callee)
+    // localLaserBeam.intersect(
+    //     new THREE.Vector3(
+    //         globalVar.intersectX,
+    //         globalVar.intersectY,
+    //         globalVar.intersectZ),
+    //     objectArray
+    // );
+
     localLaserBeam.intersect(
         new THREE.Vector3(
-            globalVar.intersectX,
-            globalVar.intersectY,
-            globalVar.intersectZ),
+            intX,
+            intY,
+            intZ),
         objectArray
     );
 }
@@ -239,8 +244,8 @@ function animate() {
 
 function LaserBeam(iconfig) {
     var config = {
-        length: iconfig.laserLength,
-        reflectMax: iconfig.reflectMax
+        length: 60,
+        reflectMax: 5
     };
 
     config = $.extend(config, iconfig);
@@ -427,8 +432,8 @@ function loadGLTF(){
 
 init3DView();
 // initReflector();
-initReflector()
- initLaserBeam(globalVar.myLaserBeam,"from init1");
+//initReflector()
+ initLaserBeam(globalVar.myLaserBeam,"from init1",2000,-30,36);
 //  initGUI(globalVar.myLaserBeam)
 
 //initGUI(globalVar.myLaserBeam,calee)
